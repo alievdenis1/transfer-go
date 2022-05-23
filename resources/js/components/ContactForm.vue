@@ -84,7 +84,7 @@ export default {
 
             this.errors.phone = "";
             let phone = this.onlyNumbers(this.phone);
-            console.log(phone);
+
             if (phone.length != 11) {
                 this.errors.phone = "Номер телефона должен быть из 11 чисел"
                 isValid = false;
