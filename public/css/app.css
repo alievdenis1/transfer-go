@@ -5014,14 +5014,6 @@ textarea.form-control-lg {
     background-position-x: 1rem;
   }
 }
-.progress {
-  display: flex;
-  height: 1rem;
-  overflow: hidden;
-  font-size: 0.675rem;
-  background-color: #e9ecef;
-  border-radius: 0.25rem;
-}
 
 .progress-bar {
   display: flex;
@@ -21846,12 +21838,6 @@ iframe#ssIFrame_google {
     padding: 0;
 }
 
-@media (min-width: 960px) {
-    .jHRPSkHspjmJmR8TqBjnQ {
-        padding: var(--spacer-56) var(--spacer-56) 0 var(--spacer-56);
-    }
-}
-
 ._1P2Y9m3KuCX0SZWMpjyIDx {
     padding: 0;
 }
@@ -28454,7 +28440,7 @@ label.tgc-labeled-input.clearfix::after {
 }
 
 .tgc-calculator .calculator-tabs li {
-    width: 50%;
+    width: 49%;
     text-align: center;
     text-transform: uppercase;
     font-size: 12px;

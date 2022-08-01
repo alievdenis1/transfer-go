@@ -14,12 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('home');
 });
 
-Auth::routes();
+Route::get('/app', function () {
+    return view('form');
+});
+
+\Illuminate\Support\Facades\Auth::routes();
 
 Route::group(['middleware' => 'role:Admin'], function() {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
 
