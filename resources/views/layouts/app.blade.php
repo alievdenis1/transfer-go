@@ -238,11 +238,11 @@
                                                         <div class="Fjw7puIUrfZG05yaYxJCV LmnXzjspncmUJLbLkiBq0">
                                                             <nav class="MuiList-root MuiList-dense css-1uzmcsd">
 
-                                                                @if (Auth::user()->hasRole('admin'))
+                                                                @role('Admin')
                                                                     <li class="GLJNiydtUyo4syC1vzraA MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-1j1r6x2">
                                                                         <a class="tgc-links-inner _3pQ-J4LYnLs4F8dAKi0auR"
                                                                            href="/admin">Admin</a></li>
-                                                                @endif
+                                                                @endrole
 
 
                                                                 <li class="GLJNiydtUyo4syC1vzraA MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-1j1r6x2">
