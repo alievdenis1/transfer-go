@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class CountriesController extends Controller
 {
     public function __construct(
-        private \App\Services\Currencies\Countries $currencies,
+        private \App\Services\Countries\Countries $countries,
         private CreatorResponses                   $creatorResponses
     )
     {}
@@ -23,7 +23,7 @@ class CountriesController extends Controller
      */
     public function index()
     {
-        return $this->creatorResponses->createJsonSuccess($this->currencies->list());
+        return $this->creatorResponses->createJsonSuccess($this->countries->list());
     }
 
     /**
