@@ -21,7 +21,9 @@
                                     <div class="calculator-select-block">
                                         <div class="select-block-label">Sending from</div>
                                         <div class="tgc-calculator-select">
-                                            <div class="tgc-calculator-select-country"><span
+
+                                            <div class="tgc-calculator-select-country">
+                                                <span
                                                 class="tgc-search-icon calculator-search-icon"
                                                 style="background-image: url(&quot;https://www.transfergo.com/static/images/search.svg&quot;);"></span><span
                                                 class="tgc-country-flag GB calculator-flag-icon active"
@@ -57,6 +59,345 @@
                                                 </button>
                                             </div>
                                             <div
+                                                class="calculator-country-dropdown-wrapper enter-leave-transition-enter-done">
+                                                <div class="tgc-calculator-country-dropdown">
+                                                    <div class="language-group-title">Популярные</div>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="GB-GBP"><span
+                                                        class="tgc-country-flag GB calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/GB.svg&quot;);"></span><span
+                                                        class="country-name">Великобритании</span><span
+                                                        class="currency-name">GBP</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item selected"
+                                                            data-qa="HU-HUF"><span
+                                                        class="tgc-country-flag HU calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/HU.svg&quot;);"></span><span
+                                                        class="country-name">Венгрии</span><span class="currency-name">HUF</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="HU-EUR"><span
+                                                        class="tgc-country-flag HU calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/HU.svg&quot;);"></span><span
+                                                        class="country-name">Венгрии</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="PL-PLN"><span
+                                                        class="tgc-country-flag PL calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/PL.svg&quot;);"></span><span
+                                                        class="country-name">Польше</span><span class="currency-name">PLN</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="PL-EUR"><span
+                                                        class="tgc-country-flag PL calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/PL.svg&quot;);"></span><span
+                                                        class="country-name">Польше</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <div class="language-group-title">Все страны</div>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="AT-EUR"><span
+                                                        class="tgc-country-flag AT calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/AT.svg&quot;);"></span><span
+                                                        class="country-name">Австрии</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="BE-EUR"><span
+                                                        class="tgc-country-flag BE calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/BE.svg&quot;);"></span><span
+                                                        class="country-name">Бельгии</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="GB-GBP"><span
+                                                        class="tgc-country-flag GB calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/GB.svg&quot;);"></span><span
+                                                        class="country-name">Великобритании</span><span
+                                                        class="currency-name">GBP</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item selected"
+                                                            data-qa="HU-HUF"><span
+                                                        class="tgc-country-flag HU calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/HU.svg&quot;);"></span><span
+                                                        class="country-name">Венгрии</span><span class="currency-name">HUF</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="HU-EUR"><span
+                                                        class="tgc-country-flag HU calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/HU.svg&quot;);"></span><span
+                                                        class="country-name">Венгрии</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="DE-EUR"><span
+                                                        class="tgc-country-flag DE calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/DE.svg&quot;);"></span><span
+                                                        class="country-name">Германии</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="GR-EUR"><span
+                                                        class="tgc-country-flag GR calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/GR.svg&quot;);"></span><span
+                                                        class="country-name">Греции</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="DK-DKK"><span
+                                                        class="tgc-country-flag DK calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/DK.svg&quot;);"></span><span
+                                                        class="country-name">Дании</span><span
+                                                        class="currency-name">DKK</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="DK-EUR"><span
+                                                        class="tgc-country-flag DK calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/DK.svg&quot;);"></span><span
+                                                        class="country-name">Дании</span><span
+                                                        class="currency-name">EUR</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="IE-EUR"><span
+                                                        class="tgc-country-flag IE calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/IE.svg&quot;);"></span><span
+                                                        class="country-name">Ирландии</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="IS-ISK"><span
+                                                        class="tgc-country-flag IS calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/IS.svg&quot;);"></span><span
+                                                        class="country-name">Исландии</span><span class="currency-name">ISK</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="IS-EUR"><span
+                                                        class="tgc-country-flag IS calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/IS.svg&quot;);"></span><span
+                                                        class="country-name">Исландии</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="ES-EUR"><span
+                                                        class="tgc-country-flag ES calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/ES.svg&quot;);"></span><span
+                                                        class="country-name">Испании</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="IT-EUR"><span
+                                                        class="tgc-country-flag IT calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/IT.svg&quot;);"></span><span
+                                                        class="country-name">Италии</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="CY-EUR"><span
+                                                        class="tgc-country-flag CY bordered calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/CY.svg&quot;);"></span><span
+                                                        class="country-name">Кипре</span><span
+                                                        class="currency-name">EUR</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="LV-EUR"><span
+                                                        class="tgc-country-flag LV calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/LV.svg&quot;);"></span><span
+                                                        class="country-name">Латвии<span
+                                                        class="tgc-badge badge">Местный</span></span><span
+                                                        class="currency-name">EUR</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="LT-EUR"><span
+                                                        class="tgc-country-flag LT calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/LT.svg&quot;);"></span><span
+                                                        class="country-name">Литве</span><span
+                                                        class="currency-name">EUR</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="LI-EUR"><span
+                                                        class="tgc-country-flag LI calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/LI.svg&quot;);"></span><span
+                                                        class="country-name">Лихтенштейне</span><span
+                                                        class="currency-name">EUR</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="LU-EUR"><span
+                                                        class="tgc-country-flag LU calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/LU.svg&quot;);"></span><span
+                                                        class="country-name">Люксембурге</span><span
+                                                        class="currency-name">EUR</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="MT-EUR"><span
+                                                        class="tgc-country-flag MT calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/MT.svg&quot;);"></span><span
+                                                        class="country-name">Мальте</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="MC-EUR"><span
+                                                        class="tgc-country-flag MC calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/MC.svg&quot;);"></span><span
+                                                        class="country-name">Монако</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="NL-EUR"><span
+                                                        class="tgc-country-flag NL calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/NL.svg&quot;);"></span><span
+                                                        class="country-name">Нидерландах</span><span
+                                                        class="currency-name">EUR</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="NO-NOK"><span
+                                                        class="tgc-country-flag NO calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/NO.svg&quot;);"></span><span
+                                                        class="country-name">Норвегии</span><span class="currency-name">NOK</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="NO-EUR"><span
+                                                        class="tgc-country-flag NO calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/NO.svg&quot;);"></span><span
+                                                        class="country-name">Норвегии</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="PL-PLN"><span
+                                                        class="tgc-country-flag PL calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/PL.svg&quot;);"></span><span
+                                                        class="country-name">Польше</span><span class="currency-name">PLN</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="PL-EUR"><span
+                                                        class="tgc-country-flag PL calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/PL.svg&quot;);"></span><span
+                                                        class="country-name">Польше</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="PT-EUR"><span
+                                                        class="tgc-country-flag PT calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/PT.svg&quot;);"></span><span
+                                                        class="country-name">Португалии</span><span
+                                                        class="currency-name">EUR</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="RO-RON"><span
+                                                        class="tgc-country-flag RO calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/RO.svg&quot;);"></span><span
+                                                        class="country-name">Румынии</span><span class="currency-name">RON</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="RO-EUR"><span
+                                                        class="tgc-country-flag RO calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/RO.svg&quot;);"></span><span
+                                                        class="country-name">Румынии</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="SM-EUR"><span
+                                                        class="tgc-country-flag SM calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/SM.svg&quot;);"></span><span
+                                                        class="country-name">Сан-Марино</span><span
+                                                        class="currency-name">EUR</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="SK-EUR"><span
+                                                        class="tgc-country-flag SK calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/SK.svg&quot;);"></span><span
+                                                        class="country-name">Словакии</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="SI-EUR"><span
+                                                        class="tgc-country-flag SI calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/SI.svg&quot;);"></span><span
+                                                        class="country-name">Словении</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="TR-TRY"><span
+                                                        class="tgc-country-flag TR calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/TR.svg&quot;);"></span><span
+                                                        class="country-name">Турции</span><span class="currency-name">TRY</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="FI-EUR"><span
+                                                        class="tgc-country-flag FI calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/FI.svg&quot;);"></span><span
+                                                        class="country-name">Финляндии</span><span
+                                                        class="currency-name">EUR</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="FR-EUR"><span
+                                                        class="tgc-country-flag FR calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/FR.svg&quot;);"></span><span
+                                                        class="country-name">Франции</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="HR-HRK"><span
+                                                        class="tgc-country-flag HR calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/HR.svg&quot;);"></span><span
+                                                        class="country-name">Хорватии</span><span class="currency-name">HRK</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="HR-EUR"><span
+                                                        class="tgc-country-flag HR calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/HR.svg&quot;);"></span><span
+                                                        class="country-name">Хорватии</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="CZ-CZK"><span
+                                                        class="tgc-country-flag CZ calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/CZ.svg&quot;);"></span><span
+                                                        class="country-name">Чехии</span><span
+                                                        class="currency-name">CZK</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="CZ-EUR"><span
+                                                        class="tgc-country-flag CZ calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/CZ.svg&quot;);"></span><span
+                                                        class="country-name">Чехии</span><span
+                                                        class="currency-name">EUR</span></button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="SE-SEK"><span
+                                                        class="tgc-country-flag SE calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/SE.svg&quot;);"></span><span
+                                                        class="country-name">Швеции</span><span class="currency-name">SEK</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="SE-EUR"><span
+                                                        class="tgc-country-flag SE calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/SE.svg&quot;);"></span><span
+                                                        class="country-name">Швеции</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                    <button type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="EE-EUR"><span
+                                                        class="tgc-country-flag EE calculator-flag-icon"
+                                                        style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/EE.svg&quot;);"></span><span
+                                                        class="country-name">Эстонии</span><span class="currency-name">EUR</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+
+                                            <div
                                                 class="tgc-amount-currency-input-container">
                                                 <input inputmode="decimal"
                                                        autocomplete="amount-input"
@@ -64,6 +405,9 @@
                                                        type="tel" value="£ 300.00"></div>
                                         </div>
                                     </div>
+
+
+
                                     <div class="calculator-select-block">
                                         <div class="select-block-label">Receiver gets in
                                         </div>
@@ -98,6 +442,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="tgc-calculator-fees">
                                         <div class="rate-block">1 GBP = 705.16087 NGN</div>
                                         <div class="fee-block">
@@ -1348,3 +1693,24 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data: () => ({
+        countries: {},
+        sendingFrom: null,
+        receiverGets: null,
+    }),
+    created() {
+        this.getCountries();
+    },
+    methods: {
+        getCountries() {
+            axios.get('api/countries').then(res => {
+                console.log(res.data.data);
+                this.success = true
+            })
+        }
+    }
+}
+</script>
