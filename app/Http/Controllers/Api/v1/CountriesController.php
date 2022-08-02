@@ -8,7 +8,7 @@ use App\Services\Api\CreatorResponses;
 use App\Services\Form\SaverFile;
 use Illuminate\Http\Request;
 
-class CurrenciesController extends Controller
+class CountriesController extends Controller
 {
     public function __construct(
         private \App\Services\Currencies\Countries $currencies,
