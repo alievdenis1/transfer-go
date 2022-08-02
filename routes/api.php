@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\v1\ContactFormsController;
+use App\Http\Controllers\Api\v1\CurrenciesController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -15,3 +16,4 @@ use App\Http\Controllers\Api\v1\ContactFormsController;
 */
 
 Route::apiResource('contact-forms', ContactFormsController::class);
+Route::apiResource('currencies', CurrenciesController::class);
