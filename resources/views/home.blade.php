@@ -12,10 +12,12 @@
                                 <p class="welcome-text">It only takes a minute. Just click on the
                                     blue button below.</p>
                                 <div class="transfer-button-container">
+                                    <a href="{{ route('app') }}">
                                     <button
                                         class="tgc-button large blue block-desktop transfer-button"
                                         type="button"><span
                                             class="button-content">Transfer money</span></button>
+                                    </a>
                                     <svg viewBox="0 0 75 132" xmlns="http://www.w3.org/2000/svg"
                                          class="transfer-arrow">
                                         <g fill="#B0C7EB" fill-rule="evenodd" opacity=".585">

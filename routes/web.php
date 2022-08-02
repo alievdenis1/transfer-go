@@ -17,11 +17,13 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/app', function () {
-    return view('form');
-});
-
 \Illuminate\Support\Facades\Auth::routes();
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/app', function () {
+        return view('form');
+    })->name('app');
+});
 
 Route::group(['middleware' => 'role:Admin'], function() {
     Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
