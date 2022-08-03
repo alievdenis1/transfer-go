@@ -27,8 +27,22 @@
 <script>
 import step1 from './pages/step1'
 export default {
+    props: ['userId'],
+    data: () => ({
+        user: null,
+    }),
     components: {
         step1
+    },
+    created() {
+        this.getDataUser().then(res => {
+            console.log(res.data.data);
+        });
+    },
+    methods: {
+        async getDataUser() {
+            return await axios.get('api/users/' + this.userId);
+        }
     }
 }
 </script>

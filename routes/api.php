@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\v1\ContactFormsController;
 use App\Http\Controllers\Api\v1\CurrenciesController;
 use \App\Http\Controllers\Api\v1\CountriesController;
+use \App\Http\Controllers\Api\v1\UserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,3 +20,5 @@ use \App\Http\Controllers\Api\v1\CountriesController;
 Route::apiResource('contact-forms', ContactFormsController::class);
 Route::apiResource('currencies', CurrenciesController::class);
 Route::apiResource('countries', CountriesController::class);
+Route::get('users/{userId}', [UserController::class, 'getData']);
+
