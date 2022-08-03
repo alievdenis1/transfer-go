@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::table('users', function($table) {
             $table->integer('min_payment');
             $table->string('last_name');
-            $table->date('date_birth');
-            $table->date('phone_number');
+            $table->timestamp('date_birth')->nullable();
+            $table->string('phone_number');
             $table->string('city');
             $table->string('Postcode');
         });
