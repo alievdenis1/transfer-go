@@ -21,7 +21,7 @@
                 </div>
             </div>
         </header>
-        <step1/>
+        <step1 :user-data="user"/>
     </div>
 </template>
 <script>
@@ -36,7 +36,7 @@ export default {
     },
     created() {
         this.getDataUser().then(res => {
-            console.log(res.data.data);
+            this.user = res.data.data.user;
         });
     },
     methods: {

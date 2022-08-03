@@ -1461,6 +1461,7 @@ export default {
     directives: {
         clickOutside: vClickOutside.directive
     },
+    props: ['userData'],
     data: () => ({
         countries: {},
         sendingFrom: null,
@@ -1481,6 +1482,11 @@ export default {
             this.receiverGets = this.countries[2];
             this.outRegion = this.countries[0];
         });
+    },
+    watch: {
+        userData(newVal) {
+            console.log(newVal);
+        }
     },
     methods: {
         async getCountries() {
