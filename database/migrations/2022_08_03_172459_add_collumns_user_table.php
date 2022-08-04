@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function($table) {
-            $table->integer('min_payment');
-            $table->string('last_name');
+            $table->integer('min_payment')->nullable();
+            $table->string('last_name')->nullable();
             $table->timestamp('date_birth')->nullable();
-            $table->string('phone_number');
-            $table->string('city');
-            $table->string('Postcode');
+            $table->string('phone_number')->nullable();
+            $table->string('city')->nullable();
+            $table->string('Postcode')->nullable();
         });
     }
 
