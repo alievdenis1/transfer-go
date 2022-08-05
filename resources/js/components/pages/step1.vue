@@ -24,6 +24,14 @@
                                     </ul>
                                 </section>
                                 <div class="calculator-content" v-if="!isLocal">
+                                    <div v-if="!isMoreMinSum" class="calculator-alert alert-warning">
+                                        <svg height="24" viewBox="0 0 24 24" width="24"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0V0z" fill="none"></path>
+                                            <path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
+                                        </svg>
+                                        The amount is too small to transfer
+                                    </div>
                                     <div class="calculator-select-block">
                                         <div class="select-block-label">Sending from</div>
                                         <div class="tgc-calculator-select">
@@ -47,13 +55,16 @@
                                                     <path
                                                         d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path>
                                                 </svg>
-                                                <button data-qa="corridor-switcher"
+                                                <button
+                                                    @click.stop="revert"
+                                                    data-qa="corridor-switcher"
                                                         class="_3Z2PTREOOZ5P5XTz-cDnCm SFlGlyNVQEB2N-tDRrOzH corridor-switcher"
                                                         type="button">
                                                     <svg width="24" height="24"
                                                          viewBox="0 0 24 24" fill="none"
                                                          xmlns="http://www.w3.org/2000/svg">
-                                                        <circle cx="12" cy="12" r="12"
+                                                        <circle
+                                                            cx="12" cy="12" r="12"
                                                                 transform="rotate(90 12 12)"
                                                                 fill="#317FF5"></circle>
                                                         <path
@@ -171,6 +182,14 @@
                                     <choose-deliver/>
                                 </div>
                                 <div class="calculator-content-local" v-if="isLocal">
+                                    <div v-if="!isMoreMinSum" class="calculator-alert alert-warning">
+                                        <svg height="24" viewBox="0 0 24 24" width="24"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0V0z" fill="none"></path>
+                                            <path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
+                                        </svg>
+                                        The amount is too small to transfer
+                                    </div>
                                     <div class="calculator-select-block">
                                         <div class="select-block-label">Sending from</div>
                                         <div class="tgc-calculator-select">
@@ -228,6 +247,7 @@
                             <div class="button-wrapper continue">
                                 <button
                                     class="_1dZ3_E1uyq1SDOhbJ9YkTB MuiButton-root MuiButton-contained _2_O5344ddmoGlkcd6CGbOJ MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-disableElevation MuiButton-fullWidth MuiButtonBase-root  css-a2exai"
+                                    :class="{'tgc-delivery-option disabled': !isMoreMinSum}"
                                     tabindex="0" type="button" data-qa="continue-button">
                                     <span class="">Continue</span></button>
                             </div>
@@ -308,50 +328,62 @@ export default {
         showOutRegion: false,
         isLocal: false,
         sendingFromSum: 300,
-        receiverGetsSum: 300,
+        receiverGetsSum: 0,
         outRegionSum: 300,
         minSum: 0,
     }),
     created() {
         this.getCountries().then(res => {
             this.countries = res.data.data;
-            console.log(this.countries);
             this.sendingFrom = this.countries[0];
             this.receiverGets = this.countries[2];
             this.outRegion = this.countries[0];
+
+            this.receiverGetsSum = this.convertCurrency(this.sendingFrom.currency, this.receiverGets.currency, this.sendingFromSum);
         });
     },
     watch: {
         userData(newVal) {
             this.minSum = newVal.min_payment;
         },
-        sendingFromSum(newVal, oldVal) {
-            if (newVal > this.minSumSendingFrom) {
-                this.receiverGetsSum = this.convertSumFromTo(newVal);
-            } else {
-                this.sendingFromSum = oldVal;
-            }
+        sendingFromSum(newVal) {
+            this.receiverGetsSum = this.convertCurrency(this.sendingFrom.currency, this.receiverGets.currency, newVal);
         },
-        receiverGetsSum(newVal, oldVal) {
-            const convertSumToFrom = this.convertSumToFrom(newVal);
-            if (convertSumToFrom > this.minSumSendingFrom) {
-                this.sendingFromSum = this.convertSumToFrom(newVal);
-            } else {
-                this.receiverGetsSum = oldVal;
-            }
+        receiverGetsSum(newVal) {
+            const convertedSum = this.convertCurrency(this.receiverGets.currency, this.sendingFrom.currency, newVal);
+            this.sendingFromSum = convertedSum;
+        },
+        sendingFrom(newVal, oldVal) {
+            this.sendingFromSum = this.convertCurrency(oldVal.currency, newVal.currency, this.sendingFromSum);
+        },
+        receiverGets(newVal, oldVal) {
+            this.receiverGetsSum = this.convertCurrency(oldVal.currency, newVal.currency, this.receiverGetsSum);
         }
     },
     computed: {
-       minSumSendingFrom() {
-            return this.sendingFrom.currency.equalDollar * this.minSum;
-        },
+        isMoreMinSum() {
+            if (this.sendingFrom == null) {
+                return false;
+            }
+            if (!this.isLocal) {
+                const minSumSendingFrom = this.sendingFrom.currency.equalDollar * this.minSum;
+                return this.sendingFromSum > minSumSendingFrom;
+            }
+
+            return true;
+        }
     },
     methods: {
-        convertSumFromTo(sum) {
-            return sum * this.sendingFrom.currency.exchangesRates[this.receiverGets.currency.slug];
+        revert() {
+            this.sendingFromSum = this.receiverGetsSum;
+            const sendingFrom = this.sendingFrom;
+            this.sendingFrom = this.receiverGets
+            this.receiverGets = sendingFrom;
         },
-        convertSumToFrom(sum) {
-            return sum * this.receiverGets.currency.exchangesRates[this.sendingFrom.currency.slug];
+        convertCurrency(currencyFrom, currencyTo, sum) {
+            let convertedSum = sum * currencyFrom.exchangesRates[currencyTo.slug];
+            convertedSum = convertedSum.toFixed(2);
+            return convertedSum;
         },
         async getCountries() {
             return await axios.get('api/countries');
