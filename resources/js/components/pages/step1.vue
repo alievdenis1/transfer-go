@@ -244,12 +244,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="button-wrapper continue">
+                            <div class="button-wrapper continue" >
                                 <button
+                                    @click="sendDataOrder"
                                     class="_1dZ3_E1uyq1SDOhbJ9YkTB MuiButton-root MuiButton-contained _2_O5344ddmoGlkcd6CGbOJ MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-disableElevation MuiButton-fullWidth MuiButtonBase-root  css-a2exai"
                                     :class="{'tgc-delivery-option disabled': !isMoreMinSum}"
-                                    tabindex="0" type="button" data-qa="continue-button">
-                                    <span class="">Continue</span></button>
+                                    tabindex="0"
+                                    type="button"
+                                    data-qa="continue-button">
+                                    <span class="">Continue</span>
+                                </button>
                             </div>
                         </div>
                         <div class="tgc-payment-option-badges">
@@ -372,11 +376,17 @@ export default {
                 const minSumSendingFrom = this.outRegion.currency.equalDollar * this.minSum;
                 return this.outRegionSum > minSumSendingFrom;
             }
-
-            return true;
         }
     },
     methods: {
+        sendDataOrder() {
+            const formData = new FormData();
+            formData.append( 'user_id', this.userData.id);
+
+            axios.post('api/create-order', formData).then(res => {
+
+            });
+        },
         revert() {
             this.sendingFromSum = this.receiverGetsSum;
             const sendingFrom = this.sendingFrom;

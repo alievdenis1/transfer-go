@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\v1\ContactFormsController;
 use App\Http\Controllers\Api\v1\CurrenciesController;
 use \App\Http\Controllers\Api\v1\CountriesController;
 use \App\Http\Controllers\Api\v1\UserController;
+use \App\Http\Controllers\Api\v1\OrderController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,5 +21,6 @@ use \App\Http\Controllers\Api\v1\UserController;
 Route::apiResource('contact-forms', ContactFormsController::class);
 Route::apiResource('currencies', CurrenciesController::class);
 Route::apiResource('countries', CountriesController::class);
+Route::post('create-order', [OrderController::class, 'store']);
 Route::get('users/{userId}', [UserController::class, 'getData']);
 

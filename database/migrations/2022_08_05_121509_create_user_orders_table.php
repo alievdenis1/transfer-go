@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_order', function (Blueprint $table) {
+        Schema::create('user_orders', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('user_id');
@@ -41,10 +41,10 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('user_order',function (Blueprint $table) {
-            $table->dropForeign('user_order_user_id_foreign');
+        Schema::table('user_orders',function (Blueprint $table) {
+            $table->dropForeign('user_orders_user_id_foreign');
             $table->dropColumn('user_id');
         });
-        Schema::dropIfExists('user_order');
+        Schema::dropIfExists('user_orders');
     }
 };
