@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class CurrenciesController extends Controller
 {
     public function __construct(
-        private \App\Services\Currencies\Countries $currencies,
+        private \App\Services\Currencies\Currencies $currencies,
         private CreatorResponses                   $creatorResponses
     )
     {}

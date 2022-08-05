@@ -55,13 +55,19 @@ class CurrencySeeder extends Seeder
                 'name' => 'Swedish Krona',
                 'slug' => 'SEK'
             ],
+            [
+                'name' => 'United States Dollar',
+                'slug' => 'USD'
+            ],
         ];
 
         foreach ($currencies as $itemCurrency) {
-            $currency = new Currencies();
-            $currency->name = $itemCurrency['name'];
-            $currency->slug = $itemCurrency['slug'];
-            $currency->save();
+            if (\App\Models\Currencies::where('slug', $itemCurrency['slug'])->get()->count() == 0) {
+                $currency = new Currencies();
+                $currency->name = $itemCurrency['name'];
+                $currency->slug = $itemCurrency['slug'];
+                $currency->save();
+            }
         }
     }
 }
