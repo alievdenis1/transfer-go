@@ -384,7 +384,9 @@ export default {
             formData.append( 'user_id', this.userData.id);
 
             axios.post('api/create-order', formData).then(res => {
-
+                if (res.data.Ok) {
+                    this.$emit('order', res.data.data.order);
+                }
             });
         },
         revert() {

@@ -3,19 +3,23 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
+use App\Services\Api\CreatorResponses;
 use App\Services\Order\Order;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
     public function __construct(
-        private Order $order
+        private Order $order,
+        private CreatorResponses $creatorResponses
     )
     {}
 
     public function store(Request $request)
     {
-        $this->order->createOrder($request->post());
+        return $this->creatorResponses->createJsonSuccess(
+            ['order' => $this->order->createOrder($request->post())]
+        );
     }
 
     public function show($id)

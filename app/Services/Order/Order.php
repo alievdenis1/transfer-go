@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    public function createOrder(array $fields)
+    public function createOrder(array $fields): array
     {
         $order = new UserOrder();
 
         $user = User::find($fields['user_id']);
-        $user->orders()->save($order);
+        return $user->orders()->save($order)->toArray();
 
         /*$table->string('sending_from_country')->nullable();
         $table->string('sending_from_currency')->nullable();
