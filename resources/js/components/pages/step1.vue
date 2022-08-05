@@ -381,7 +381,27 @@ export default {
     methods: {
         sendDataOrder() {
             const formData = new FormData();
+
             formData.append( 'user_id', this.userData.id);
+
+            if (this.isLocal) {
+                formData.append( 'sending_from_country', this.outRegion.slug);
+                formData.append( 'sending_from_currency', this.outRegion.currency.slug);
+                formData.append( 'type_transaction', 'local');
+                formData.append( 'from_sum', this.outRegionSum);
+            } else {
+                formData.append( 'sending_from_country', this.sendingFrom.slug);
+                formData.append( 'sending_from_currency', this.sendingFrom.currency.slug);
+
+                formData.append( 'receiver_get_country', this.receiverGets.slug);
+                formData.append( 'receiver_get_currency', this.receiverGets.currency.slug);
+
+                formData.append( 'type_transaction', 'international');
+
+                formData.append( 'from_sum', this.sendingFromSum);
+                formData.append( 'to_sum', this.receiverGetsSum);
+            }
+
 
             axios.post('api/create-order', formData).then(res => {
                 if (res.data.Ok) {

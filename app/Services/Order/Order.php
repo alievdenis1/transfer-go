@@ -12,19 +12,12 @@ class Order extends Model
     {
         $order = new UserOrder();
 
+        foreach ($fields as $key => $field) {
+            if ($key == 'user_id') continue;
+            $order->$key = $field;
+        }
+
         $user = User::find($fields['user_id']);
         return $user->orders()->save($order)->toArray();
-
-        /*$table->string('sending_from_country')->nullable();
-        $table->string('sending_from_currency')->nullable();
-
-        $table->string('receiver_get_country')->nullable();
-        $table->string('receiver_get_currency')->nullable();
-
-        $table->string('first_name')->nullable();
-        $table->string('last_name')->nullable();
-
-        $table->string('type_pay')->nullable();
-        $table->string('type_transaction')->nullable();*/
     }
 }

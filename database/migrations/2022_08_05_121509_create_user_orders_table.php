@@ -29,7 +29,11 @@ return new class extends Migration
             $table->string('last_name')->nullable();
 
             $table->string('type_pay')->nullable();
-            $table->string('type_transaction')->nullable();;
+            $table->string('type_transaction')->nullable();
+
+            $table->float('from_sum')->nullable();
+            $table->float('to_sum')->nullable();
+
             $table->timestamps();
         });
     }
