@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('user_order', function (Blueprint $table) {
             $table->id();
 
-            $table->index('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->string('sending_from_country')->nullable();
@@ -42,8 +42,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('user_order',function (Blueprint $table) {
-            $table->dropColumn('user_order_user_id_foreign');
-            $table->dropIndex('user_order_user_id_index');
+            $table->dropForeign('user_order_user_id_foreign');
             $table->dropColumn('user_id');
         });
         Schema::dropIfExists('user_order');
