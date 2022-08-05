@@ -161,7 +161,7 @@
                                     </div>
 
                                     <div class="tgc-calculator-fees">
-                                        <div class="rate-block">1 GBP = 705.16087 NGN</div>
+                                        <div class="rate-block">1 {{sendingFrom.currency.slug}} = {{convertCurrency(sendingFrom.currency, receiverGets.currency, 1)}} {{receiverGets.currency.slug}}</div>
                                         <div class="fee-block">
                                             <div class="tgc-simple-tooltip">
                                                 <div class="tooltip--container">
