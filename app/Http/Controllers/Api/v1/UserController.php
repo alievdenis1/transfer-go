@@ -16,6 +16,14 @@ class UserController extends Controller
     public function getData(int $userId)
     {
         $user = User::find($userId);
+        $user = [
+            'id' => $userId,
+            'name' => $user['name'],
+            'email' => $user['email'],
+            'min_payment' => $user['min_payment'] ?? 100,
+        ];
+
+
         return $this->creatorResponses->createJsonSuccess(['user' => $user]);
     }
 }

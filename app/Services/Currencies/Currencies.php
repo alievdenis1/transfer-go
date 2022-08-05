@@ -28,7 +28,7 @@ class Currencies
             };
         };
 
-        return \App\Models\Currencies::all()->toArray();
+        return $currencies;
     }
 
     public function convert(array $from, array $to): float
