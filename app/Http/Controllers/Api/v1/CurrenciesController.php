@@ -23,7 +23,7 @@ class CurrenciesController extends Controller
      */
     public function index()
     {
-        return $this->creatorResponses->createJsonSuccess($this->currencies->list());
+        return $this->creatorResponses->createJsonSuccess($this->currencies->currenciesList());
     }
 
     /**
