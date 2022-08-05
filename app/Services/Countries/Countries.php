@@ -29,7 +29,8 @@ class Countries
                         'id' => $currency->id,
                         'name' => $currency->name,
                         'slug' => $currency->slug,
-                        'exchangesRates' => $currenciesList[$currency->id]['exchangesRates']
+                        'exchangesRates' => $currenciesList[$currency->id]['exchangesRates'],
+                        'equalDollar' => $currenciesList[$currency->id]['equalDollar']
                     ]
                 ];
             };

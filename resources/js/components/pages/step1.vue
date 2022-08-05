@@ -315,6 +315,7 @@ export default {
     created() {
         this.getCountries().then(res => {
             this.countries = res.data.data;
+            console.log(this.countries);
             this.sendingFrom = this.countries[0];
             this.receiverGets = this.countries[2];
             this.outRegion = this.countries[0];
@@ -322,10 +323,36 @@ export default {
     },
     watch: {
         userData(newVal) {
-            console.log(newVal);
+            this.minSum = newVal.min_payment;
+        },
+        sendingFromSum(newVal, oldVal) {
+            if (newVal > this.minSumSendingFrom) {
+                this.receiverGetsSum = this.convertSumFromTo(newVal);
+            } else {
+                this.sendingFromSum = oldVal;
+            }
+        },
+        receiverGetsSum(newVal, oldVal) {
+            const convertSumToFrom = this.convertSumToFrom(newVal);
+            if (convertSumToFrom > this.minSumSendingFrom) {
+                this.sendingFromSum = this.convertSumToFrom(newVal);
+            } else {
+                this.receiverGetsSum = oldVal;
+            }
         }
     },
+    computed: {
+       minSumSendingFrom() {
+            return this.sendingFrom.currency.equalDollar * this.minSum;
+        },
+    },
     methods: {
+        convertSumFromTo(sum) {
+            return sum * this.sendingFrom.currency.exchangesRates[this.receiverGets.currency.slug];
+        },
+        convertSumToFrom(sum) {
+            return sum * this.receiverGets.currency.exchangesRates[this.sendingFrom.currency.slug];
+        },
         async getCountries() {
             return await axios.get('api/countries');
         },
