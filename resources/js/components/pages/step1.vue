@@ -405,10 +405,9 @@ export default {
 
                 formData.append( 'from_sum', this.sendingFromSum);
                 formData.append( 'to_sum', this.receiverGetsSum);
-
-                formData.append( 'exchange_rate', this.convertCurrency(this.sendingFrom.currency, this.receiverGets.currency, 1));
             }
 
+            formData.append( 'exchange_rate', this.convertCurrency(this.sendingFrom.currency, this.receiverGets.currency, 1));
 
             axios.post('api/create-order', formData).then(res => {
                 if (res.data.Ok) {

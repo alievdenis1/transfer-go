@@ -242,7 +242,7 @@ export default {
             this.countries = res.data.data;
             this.toSum = this.userOrder.to_sum
             this.countryReceiverGets = this.countries.filter(
-                country => country.slug == this.userOrder.receiver_get_country
+                country => country.currency.slug == this.userOrder.receiver_get_currency
             )[0]
         });
     },
@@ -303,7 +303,7 @@ export default {
             }
 
             formData.append('receiver_get_country', this.countryReceiverGets.slug);
-            formData.append('receiver_get_country', this.countryReceiverGets.currency.slug);
+            formData.append('receiver_get_currency', this.countryReceiverGets.currency.slug);
             formData.append('first_name', this.firstName);
             formData.append('last_name', this.lastName);
             formData.append( 'type_pay', this.typePay);

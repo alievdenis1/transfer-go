@@ -21,14 +21,19 @@
                 </div>
             </div>
         </header>
-        <step1 v-if="currentStep === 1" :user-data="user" v-on:order="orderHandler($event)"/>
-        <step2 v-if="currentStep === 2" :user-order="userOrder" v-on:back="currentStep = $event"/>
+        <step1 v-if="currentStep === 1" :user-data="user" v-on:order="orderHandler1($event)"/>
+        <step2 v-if="currentStep === 2" :user-order="userOrder" v-on:order="orderHandler2($event)"
+               v-on:back="currentStep = $event; percentLoad=12.5"/>
+        <step3 v-if="currentStep === 3" :user-order="userOrder" v-on:order="orderHandler3($event)"
+               v-on:back="currentStep = $event; percentLoad=37.5"/>
+
 
     </div>
 </template>
 <script>
 import step1 from './pages/step1'
 import step2 from './pages/step2'
+import step3 from './pages/step3'
 
 export default {
     props: ['userId'],
@@ -40,7 +45,8 @@ export default {
     }),
     components: {
         step1,
-        step2
+        step2,
+        step3,
     },
     created() {
         this.getDataUser().then(res => {
@@ -56,11 +62,21 @@ export default {
         async getDataUser() {
             return await axios.get('api/users/' + this.userId);
         },
-        orderHandler(e) {
+        orderHandler1(e) {
             this.currentStep = 2
             this.percentLoad = 37.5;
             this.userOrder = e;
-        }
+        },
+        orderHandler2(e) {
+            this.currentStep = 3
+            this.percentLoad = 62.5;
+            this.userOrder = e;
+        },
+        orderHandler3(e) {
+            this.currentStep = 4
+            this.percentLoad = 100;
+            this.userOrder = e;
+        },
     }
 }
 </script>
