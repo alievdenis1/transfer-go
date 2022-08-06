@@ -38417,6 +38417,13 @@ div.filepicker {
     margin: auto;
 }
 
+.progress {
+    height: 4px !important;
+}
+
+.tgc-header-progress-bar {
+    padding-bottom: 60px !important;
+}
 .tgc-business-onboarding-header .language-select {
     border: none;
     color: inherit;

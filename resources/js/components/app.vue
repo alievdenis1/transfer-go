@@ -26,6 +26,7 @@
                v-on:back="currentStep = $event; percentLoad=12.5"/>
         <step3 v-if="currentStep === 3" :user-order="userOrder" v-on:order="orderHandler3($event)"
                v-on:back="currentStep = $event; percentLoad=37.5"/>
+        <step4 v-if="currentStep === 4" :user-order="userOrder" />
 
 
     </div>
@@ -34,6 +35,7 @@
 import step1 from './pages/step1'
 import step2 from './pages/step2'
 import step3 from './pages/step3'
+import step4 from './pages/step4'
 
 export default {
     props: ['userId'],
@@ -47,6 +49,7 @@ export default {
         step1,
         step2,
         step3,
+        step4
     },
     created() {
         this.getDataUser().then(res => {
