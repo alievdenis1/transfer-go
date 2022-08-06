@@ -20,4 +20,18 @@ class Order extends Model
         $user = User::find($fields['user_id']);
         return $user->orders()->save($order)->toArray();
     }
+
+    public function deleteOrder(int $id)
+    {
+        UserOrder::find($id)->delete();
+    }
+
+    public function updateOrder(array $fields, int $id) {
+        $order = UserOrder::find($id);
+        foreach ($fields as $key => $field) {
+            $order->$key = $field;
+        }
+        $order->save();
+        return $order->toArray();
+    }
 }

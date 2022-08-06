@@ -22,5 +22,8 @@ Route::apiResource('contact-forms', ContactFormsController::class);
 Route::apiResource('currencies', CurrenciesController::class);
 Route::apiResource('countries', CountriesController::class);
 Route::post('create-order', [OrderController::class, 'store']);
+Route::get('delete-order/{orderId}', [OrderController::class, 'destroy']);
+Route::post('update-order/{orderId}', [OrderController::class, 'update']);
+
 Route::get('users/{userId}', [UserController::class, 'getData']);
 

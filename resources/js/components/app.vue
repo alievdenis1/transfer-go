@@ -22,7 +22,7 @@
             </div>
         </header>
         <step1 v-if="currentStep === 1" :user-data="user" v-on:order="orderHandler($event)"/>
-        <step2 v-if="currentStep === 2" :user-order="userOrder"/>
+        <step2 v-if="currentStep === 2" :user-order="userOrder" v-on:back="currentStep = $event"/>
 
     </div>
 </template>

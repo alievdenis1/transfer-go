@@ -22,13 +22,20 @@ class OrderController extends Controller
         );
     }
 
+    public function destroy(int $id)
+    {
+        $this->order->deleteOrder($id);
+    }
+
     public function show($id)
     {
         //
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
-        //
+        return $this->creatorResponses->createJsonSuccess(
+            ['order' => $this->order->updateOrder($request->post(), $id)]
+        );
     }
 }

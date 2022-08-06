@@ -29,10 +29,18 @@ return new class extends Migration
             $table->string('last_name')->nullable();
 
             $table->string('type_pay')->nullable();
+            $table->string('number_card')->nullable();
+            $table->string('bank_name')->nullable();
+            $table->string('account_number')->nullable();
+
             $table->string('type_transaction')->nullable();
 
             $table->float('from_sum')->nullable();
             $table->float('to_sum')->nullable();
+
+            $table->float('exchange_rate')->nullable();
+
+            $table->boolean('confirmed')->default(false);
 
             $table->timestamps();
         });

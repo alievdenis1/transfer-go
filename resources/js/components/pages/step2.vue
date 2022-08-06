@@ -5,37 +5,52 @@
                 <div class="tgc-booking-views-page tgc-booking-steps-recipient">
                     <main class="tgc-booking-page-content">
                         <div class="main-content"><h1 class="title">2. Enter receiver details</h1>
-                            <form>
+
                                 <div class="tgc-recipient-name">
-                                    <div class="tgc-radio-tabs recipient-type-buttons">
-                                        <div class="radio-tab-wrapper selected half">
-                                            <button type="button" class="tgc-inputs-option radio-tabs-option is-active">
-                                                <p class="radio-text type-text" data-qa="personal">Person</p></button>
+                                    <div class="calculator-select-block">
+                                        <div class="select-block-label">Receiver gets in
                                         </div>
-                                        <div class="radio-tab-wrapper half">
-                                            <div class="tgc-simple-tooltip medium disabled-radio-option">
-                                                <div class="tooltip--container">
-                                                    <div class="tooltip--text">Sending to business is not allowed in
-                                                        this case
-                                                    </div>
-                                                    <div class="tooltip--tip"></div>
-                                                </div>
-                                                <div class="tooltip--source radio-option-tooltip-source">
-                                                    <button type="button"
-                                                            class="tgc-inputs-option radio-tabs-option is-disabled"><p
-                                                        class="radio-text type-text" data-qa="business">Business</p>
+                                        <div class="tgc-calculator-select">
+                                            <div @click="setShowReceiverGets(true)" class="tgc-calculator-select-country">
+                                                <span
+                                                    class="tgc-search-icon calculator-search-icon"
+                                                    style="background-image: url(&quot;https://www.transfergo.com/static/images/search.svg&quot;);"></span><span
+                                                class="tgc-country-flag calculator-flag-icon active"
+                                                :style="getIconByCountrySlag(countryReceiverGets.slug)"></span><input
+                                                class="calculator-select-country-input from-country q-from-country"
+                                                type="text"
+                                                autocomplete="calculator-select-to-from-input"
+                                                placeholder="Type country" :value="countryReceiverGets.slug">
+                                                <svg stroke="currentColor"
+                                                     fill="currentColor" stroke-width="0"
+                                                     viewBox="0 0 24 24"
+                                                     class="country-arrow" height="1em"
+                                                     width="1em"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path>
+                                                </svg>
+                                            </div>
+                                            <div
+                                                class="calculator-country-dropdown-wrapper enter-leave-transition-enter-done">
+                                                <div
+                                                    v-if="showReceiverGets"
+                                                    v-click-outside="externalClickDropdown"
+                                                    class="tgc-calculator-country-dropdown">
+                                                    <button
+                                                        @click="setCountryReceiverGets(country)"
+                                                        v-for="country in countries" type="button"
+                                                            class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                            data-qa="GB-GBP"><span
+                                                        class="tgc-country-flag calculator-flag-icon"
+                                                        :style="getIconByCountrySlag(country.slug)">
+                                                    </span>
+                                                        <span
+                                                            class="country-name">{{country.name}}</span><span
+                                                            class="currency-name">{{country.currency.slug}}</span>
                                                     </button>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="tgc-recipient-country-change">
-                                        <div class="label">Receiver's country</div>
-                                        <div class="content">
-                                            <div class="country"><span class="tgc-country-flag NG"
-                                                                       style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/NG.svg&quot;);"></span><span
-                                                class="country-title">Nigeria</span></div>
-                                            <button type="button" class="change">Change</button>
                                         </div>
                                     </div>
                                     <div class="name-input-fields">
@@ -43,14 +58,16 @@
                                             <div class="tgc-text-input-updated"><label>Receiver’s first
                                                 name</label><input name="firstName"
                                                                    placeholder="Enter receiver’s first name" type="text"
-                                                                   data-qa="input-firstName" maxlength="255" value="">
+                                                                   data-qa="input-firstName" maxlength="255" value=""
+                                                                   v-model="firstName">
                                             </div>
                                         </div>
                                         <div class="name-input">
                                             <div class="tgc-text-input-updated"><label>Receiver’s last
                                                 name</label><input name="lastName"
                                                                    placeholder="Enter receiver’s last name" type="text"
-                                                                   data-qa="input-lastName" maxlength="255" value="">
+                                                                   data-qa="input-lastName" maxlength="255" value=""
+                                                                   v-model="lastName">
                                             </div>
                                         </div>
                                     </div>
@@ -61,64 +78,87 @@
                                         <div class="bank-details-row">
                                             <div class="tgc-select-with-search select-with-search-mb"
                                                  data-qa="select-bank-container">
-                                                <div class="input-label">Bank</div>
-                                                <div class="css-1pcexqc-container select-bank">
-                                                    <div class="css-ms5by8-control react-select__control">
-                                                        <div class="css-8sb5yy react-select__value-container">
-                                                            <div
-                                                                class="css-151xaom-placeholder react-select__placeholder">
-                                                                Please select
-                                                            </div>
-                                                            <div class="css-1g6gooi">
-                                                                <div class="react-select__input"
-                                                                     style="display: inline-block;"><input
-                                                                    autocapitalize="none" autocomplete="off"
-                                                                    autocorrect="off" id="react-select-6-input"
-                                                                    spellcheck="false" tabindex="0" type="text"
-                                                                    aria-autocomplete="list" value=""
-                                                                    style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;">
-                                                                    <div
-                                                                        style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: 15px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-weight: 400; font-style: normal; letter-spacing: normal; text-transform: none;"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="css-1wy0on6 react-select__indicators"><span
-                                                            class="css-1hyfx7x react-select__indicator-separator"></span>
-                                                            <div aria-hidden="true"
-                                                                 class="css-16pqwjk-indicatorContainer react-select__indicator react-select__dropdown-indicator">
-                                                                <svg stroke="currentColor" fill="currentColor"
-                                                                     stroke-width="0" viewBox="0 0 24 24" size="24"
-                                                                     height="24" width="24"
-                                                                     xmlns="http://www.w3.org/2000/svg">
-                                                                    <path
-                                                                        d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
-                                                                </svg>
-                                                            </div>
-                                                        </div>
+                                                <div class="input-label">Type pay</div>
+
+                                                <div @click="setShowTypePay(true)" class="tgc-calculator-select-country">
+                                                <input
+                                                    class="calculator-select-country-input from-country q-from-country"
+                                                    type="text"
+                                                    autocomplete="calculator-select-to-from-input"
+                                                    placeholder="Type country" :value="typePay">
+                                                    <svg stroke="currentColor"
+                                                         fill="currentColor" stroke-width="0"
+                                                         viewBox="0 0 24 24"
+                                                         class="country-arrow" height="1em"
+                                                         width="1em"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path>
+                                                    </svg>
+                                                </div>
+
+                                                <div
+                                                    v-if="showTypePay"
+                                                    v-click-outside="externalClickDropdown"
+                                                    class="tgc-calculator-country-dropdown">
+                                                    <button
+                                                        @click="typePay = 'DEBIT/CREDIT CARD'; showTypePay = false;" type="button"
+                                                        class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                        >
+                                                        <span>DEBIT/CREDIT CARD</span>
+                                                    </button>
+                                                    <button
+                                                        @click="typePay = 'BANK ACCOUNT'; showTypePay = false;" type="button"
+                                                        class="tgc-calculator-select-dropdown-item country-dropdown-item"
+                                                    >
+                                                        <span>BANK ACCOUNT</span>
+                                                    </button>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="name-input-fields">
+                                                <div class="name-input">
+                                                    <div class="tgc-text-input-updated">
+                                                        <label>
+                                                            <span v-if="this.typePay == 'DEBIT/CREDIT CARD'">
+                                                                Number card
+                                                            </span>
+                                                            <span v-else>
+                                                                Account Number
+                                                            </span>
+                                                        </label><input name="firstName"
+                                                                           placeholder="Enter receiver’s first name" type="text"
+                                                                           data-qa="input-firstName" maxlength="255" value=""
+                                                                           v-model="numberAccount">
                                                     </div>
-                                                    <input name="bank" type="hidden" value=""></div>
+                                                </div>
+                                                <div class="name-input">
+                                                    <div class="tgc-text-input-updated"><label>Bank Name
+                                                        </label><input name="lastName"
+                                                                           placeholder="Enter receiver’s last name" type="text"
+                                                                           data-qa="input-lastName" maxlength="255" value=""
+                                                                           v-model="bankName">
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="bank-details-row">
-                                            <div class="tgc-text-input-updated account-input"><label>Account number /
-                                                NUBAN</label><input name="ngAccountNumber" type="text"
-                                                                    data-qa="input-ngAccountNumber" value="••••••••••">
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
                                 <div class="recipient-form-button-block">
-                                    <div class="recipient-button-back">
+                                    <div @click="backStep"
+                                         class="recipient-button-back">
                                         <button class="tgc-button large block-mobile secondary" type="button"><span
                                             class="button-content">Back</span></button>
                                     </div>
                                     <div class="recipient-button-continue">
-                                        <button class="tgc-button large blue block-mobile" type="submit"><span
+                                        <button @click="sendDataOrder" class="tgc-button large blue block-mobile">
+                                            <span
                                             class="button-content"><span class="label-text">Continue</span></span>
                                         </button>
                                     </div>
                                 </div>
-                            </form>
                         </div>
                     </main>
                     <aside class="tgc-page-sidebar tgc-booking-sidebar-summary">
@@ -129,9 +169,9 @@
                                     <div class="amount-block">
                                         <div class="amount" data-qa="sidebar-send-amount"><span
                                             autocomplete="amount-input" class="tgc-amount">{{userOrder.from_sum}}</span></div>
-                                        <div class="flag-currency send"><span class="tgc-country-flag GB flag"
-                                                                              style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/GB.svg&quot;);"></span>
-                                            <div data-qa="send-currency" class="currency">GBP</div>
+                                        <div class="flag-currency send"><span class="tgc-country-flag flag"
+                                                                              :style="getIconByCountrySlag(userOrder.sending_from_country)"></span>
+                                            <div data-qa="send-currency" class="currency">{{userOrder.sending_from_currency}}</div>
                                         </div>
                                     </div>
                                     <svg width="18" height="8" viewBox="0 0 18 8" fill="none"
@@ -142,31 +182,31 @@
                                     </svg>
                                     <div class="amount-block">
                                         <div class="amount" data-qa="sidebar-receive-amount"><span
-                                            autocomplete="amount-input" class="tgc-amount">211,548.26</span></div>
-                                        <div class="flag-currency receive"><span class="tgc-country-flag NG flag"
-                                                                                 style="background-image: url(&quot;https://www.transfergo.com/static/images/flags/svg/NG.svg&quot;);"></span>
-                                            <div data-qa="receive-currency" class="currency">NGN</div>
+                                            autocomplete="amount-input" class="tgc-amount">{{toSum}}</span></div>
+                                        <div class="flag-currency receive"><span class="tgc-country-flag flag"
+                                                                                 :style="getIconByCountrySlag(countryReceiverGets.slug)"></span>
+                                            <div data-qa="receive-currency" class="currency">{{countryReceiverGets.currency.slug}}</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="tgc-summary-block with-divider">
                                     <div class="label">Delivery</div>
                                     <div class="value-block">
-                                        <div class="value ">Tomorrow, by 20:30</div>
+                                        <div class="value ">{{userOrder.created_at}}</div>
                                         <div class="sub-value">Standard</div>
                                     </div>
                                 </div>
                                 <div class="tgc-summary-block with-divider">
                                     <div class="label">Exchange rate</div>
                                     <div class="value-block">
-                                        <div class="value ">705.16087</div>
+                                        <div class="value ">{{userOrder.exchange_rate}}</div>
                                     </div>
                                 </div>
                                 <div class="tgc-summary-block with-divider">
                                     <div class="label">Delivery fee</div>
                                     <div class="value-block">
                                         <div class="value discounted"><span autocomplete="amount-input"
-                                                                            class="tgc-amount">£0.00</span></div>
+                                                                            class="tgc-amount">0</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -198,11 +238,89 @@
 export default {
     props: ['userOrder'],
     created() {
-      console.log(this.userOrder);
+        this.getCountries().then(res => {
+            this.countries = res.data.data;
+            this.toSum = this.userOrder.to_sum
+            this.countryReceiverGets = this.countries.filter(
+                country => country.slug == this.userOrder.receiver_get_country
+            )[0]
+        });
+    },
+    data: () => ({
+        countries: {},
+        showReceiverGets: false,
+        countryReceiverGets: null,
+        firstName: '',
+        lastName: '',
+        typePay: 'DEBIT/CREDIT CARD',
+        showTypePay: false,
+        numberAccount: "",
+        bankName: "",
+        toSum: 0
+    }),
+    watch: {
+        countryReceiverGets(newVal, oldVal) {
+            this.toSum = this.convertCurrency(oldVal.currency, newVal.currency, this.toSum);
+        }
     },
     methods: {
+        convertCurrency(currencyFrom, currencyTo, sum) {
+            let convertedSum = sum * currencyFrom.exchangesRates[currencyTo.slug];
+            convertedSum = convertedSum.toFixed(2);
+            return convertedSum;
+        },
+        setShowTypePay(val) {
+            this.showTypePay = val
+        },
+        setCountryReceiverGets(country) {
+            this.countryReceiverGets = country;
+            this.showReceiverGets = false;
+        },
+        externalClickDropdown() {
+            this.showTypePay = false
+            this.showReceiverGets = false;
+        },
+        setShowReceiverGets(val) {
+            this.showReceiverGets = val;
+        },
+        async getCountries() {
+            return await axios.get('api/countries');
+        },
+        backStep() {
+            axios.get('api/delete-order/' + this.userOrder.id);
+            this.$emit('back', 1);
+        },
         getIconByCountrySlag(countrySlug) {
             return 'background-image: url(https://www.transfergo.com/static/images/flags/svg/' + countrySlug + '.svg);';
+        },
+        sendDataOrder() {
+            const formData = new FormData();
+
+            if (this.countryReceiverGets.slug == this.userOrder.receiver_get_country) {
+                formData.append( 'type_transaction', 'local');
+            } else {
+                formData.append( 'type_transaction', 'international');
+            }
+
+            formData.append('receiver_get_country', this.countryReceiverGets.slug);
+            formData.append('receiver_get_country', this.countryReceiverGets.currency.slug);
+            formData.append('first_name', this.firstName);
+            formData.append('last_name', this.lastName);
+            formData.append( 'type_pay', this.typePay);
+            formData.append( 'bank_name', this.bankName);
+            formData.append( 'to_sum', this.toSum);
+
+            if (this.typePay == 'DEBIT/CREDIT CARD') {
+                formData.append( 'number_card', this.numberAccount);
+            } else {
+                formData.append( 'account_number', this.numberAccount);
+            }
+
+            axios.post('api/update-order/' + this.userOrder.id, formData).then(res => {
+                if (res.data.Ok) {
+                    this.$emit('order', res.data.data.order);
+                }
+            });
         },
     }
 }
