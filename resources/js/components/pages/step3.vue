@@ -64,6 +64,16 @@
                                                     <span class="review-label">Number card</span>
                                                     <span class="review-data">{{userOrder.number_card}}</span>
                                                 </div>
+
+                                                <div class="row-item">
+                                                    <span class="review-label">First name</span>
+                                                    <span class="review-data">{{userOrder.first_name}}</span>
+                                                </div>
+
+                                                <div class="row-item">
+                                                    <span class="review-label">Last name</span>
+                                                    <span class="review-data">{{userOrder.last_name}}</span>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="tgc-lie-theme-section-heading">
