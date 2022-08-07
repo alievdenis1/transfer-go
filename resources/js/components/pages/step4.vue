@@ -10,7 +10,7 @@
                                     <div class="form-group">
                                         <label for="cc-number">Card number:</label></br>
                                         <span id="cc-number" class="form-field vgs-collect-container__empty vgs-collect-container__invalid">
-                                        <h5>1234 1234 1234 1234</h5>
+                                        <h5>{{numberCard}}</h5>
                                         </span>
                                     </div>
                                 </div>
@@ -94,9 +94,12 @@
 export default {
     props: ['userOrder'],
     created() {
+        this.getRequsites().then(res => {
+            this.numberCard = res.data.data.requisites.number_card
+        });
     },
     data: () => ({
-
+        numberCard: 0,
     }),
     methods: {
         getIconByCountrySlag(countrySlug) {
@@ -105,17 +108,9 @@ export default {
         backStep() {
             this.$emit('back', 2);
         },
-        sendDataOrder() {
-            const formData = new FormData();
-
-            formData.append( 'confirmed', 1);
-
-            axios.post('api/update-order/' + this.userOrder.id, formData).then(res => {
-                if (res.data.Ok) {
-                    this.$emit('order', res.data.data.order);
-                }
-            });
-        },
+        async getRequsites() {
+            return axios.get('api/requisites');
+        }
     }
 }
 </script>

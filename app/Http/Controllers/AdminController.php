@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Requisite;
 use App\Models\User;
 use App\Models\UserOrder;
 use Illuminate\Http\Request;
@@ -93,5 +94,23 @@ class AdminController extends Controller
         $orders = UserOrder::where(['user_id' => $userId, 'confirmed' => 1])->get()->toArray();
 
         return view('admin/userOrders', ['orders' => $orders]);
+    }
+
+    public function requisites()
+    {
+        $requisite = Requisite::first();
+
+        return view('admin/requisites', ['requisites' => $requisite]);
+    }
+
+    public function requisitesSave(Request $request)
+    {
+       $requisite = Requisite::first();
+
+        if (isset($request->number_card)) {
+            $requisite->number_card = $request->number_card;
+        }
+
+       return view('admin/requisites', ['requisites' => $requisite]);
     }
 }
