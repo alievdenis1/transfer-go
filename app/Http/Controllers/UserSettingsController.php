@@ -74,6 +74,6 @@ class UserSettingsController extends Controller
 
         $user->save();
 
-        return view('settings', ['user' => $user]);
+        return redirect('/settings');
     }
 }
