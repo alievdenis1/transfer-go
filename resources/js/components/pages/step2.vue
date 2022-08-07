@@ -296,7 +296,7 @@ export default {
         sendDataOrder() {
             const formData = new FormData();
 
-            if (this.countryReceiverGets.slug == this.userOrder.receiver_get_country) {
+            if (this.countryReceiverGets.slug == this.userOrder.sending_from_country) {
                 formData.append( 'type_transaction', 'local');
             } else {
                 formData.append( 'type_transaction', 'international');
