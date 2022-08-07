@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-
+Route::get('/home', function () {
+    return view('home');
+});
 \Illuminate\Support\Facades\Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
@@ -29,6 +31,9 @@ Route::group(['middleware' => 'auth'], function() {
 });
 
 Route::group(['middleware' => 'role:Admin'], function() {
-    Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index']);
+    Route::get('/admin/requisites', [App\Http\Controllers\AdminController::class, 'index']);
+    Route::get('/admin/users/{id}', [App\Http\Controllers\AdminController::class, 'index']);
+    Route::get('/admin/users/{id}/orders', [App\Http\Controllers\AdminController::class, 'index']);
 });
 
