@@ -30,10 +30,10 @@
                                                 <th scope="row">{{ $user['email'] }}</th>
                                                 <th scope="row">{{ $user['min_payment'] ?? 100 }}</th>
                                                 <th scope="row">
-                                                    <a href="/admin/users/{$user['id']}/orders">orders</a>
+                                                    <a href="<?= '/admin/users/' . $user['id'] . '/orders'?>"> orders</a>
                                                 </th>
                                                 <th scope="row">
-                                                    <a href="/admin/users/{$user['id']}">edit</a>
+                                                    <a href="<?= '/admin/users/' . $user['id'] ?>">edit</a>
                                                 </th>
                                             </tr>
                                         @endforeach

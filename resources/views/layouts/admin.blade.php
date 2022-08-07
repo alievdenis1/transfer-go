@@ -132,7 +132,7 @@
                         <header class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionSticky _38nTFKANjSZ6euSwvFPDVJ _3_cGvCaiW2QflAzgtcon6x css-i1u6zi">
                             <div class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap _2Iz2AjNzRvML8os-5Y74Dn css-jgm9a3">
                                 <div class="MuiGrid-root MuiGrid-item _2zExeO6po3w07gwFY2gmBY css-1wxaqej"><h4
-                                        class="MuiTypography-root MuiTypography-h4 css-16svqnm"><span>Home</span>
+                                        class="MuiTypography-root MuiTypography-h4 css-16svqnm"><span>Admin</span>
                                     </h4></div>
                                 <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
                                     <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-wrap-xs-nowrap css-zo3lhu">

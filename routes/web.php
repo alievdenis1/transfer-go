@@ -33,7 +33,8 @@ Route::group(['middleware' => 'auth'], function() {
 Route::group(['middleware' => 'role:Admin'], function() {
     Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index']);
     Route::get('/admin/requisites', [App\Http\Controllers\AdminController::class, 'index']);
-    Route::get('/admin/users/{id}', [App\Http\Controllers\AdminController::class, 'index']);
-    Route::get('/admin/users/{id}/orders', [App\Http\Controllers\AdminController::class, 'index']);
+    Route::get('/admin/users/{id}', [App\Http\Controllers\AdminController::class, 'user']);
+    Route::post('/admin/users/{id}', [App\Http\Controllers\AdminController::class, 'userUpdate']);
+    Route::get('/admin/users/{id}/orders', [App\Http\Controllers\AdminController::class, 'userOrders']);
 });
 
