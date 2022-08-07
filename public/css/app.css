@@ -24164,7 +24164,7 @@ td.rdtYear:hover {
 .tgc-details .details-footer .requirement-block,
 .tgc-details .details-footer .button-wrapper {
     display: inline-block;
-    width: 50%;
+    width: 49%;
 }
 
 @media screen and (max-width: 639px) {

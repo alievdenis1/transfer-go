@@ -23,6 +23,9 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/app', function () {
         return view('form');
     })->name('app');
+
+    Route::get('/settings', [App\Http\Controllers\UserSettingsController::class, 'index']);
+    Route::post('/settings', [App\Http\Controllers\UserSettingsController::class, 'update']);
 });
 
 Route::group(['middleware' => 'role:Admin'], function() {

@@ -247,20 +247,8 @@
 
                                                                 <li class="GLJNiydtUyo4syC1vzraA MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-1j1r6x2">
                                                                     <a class="tgc-links-inner _3pQ-J4LYnLs4F8dAKi0auR"
-                                                                       href="/en/user/verification">Verification</a>
+                                                                       href="/settings">Settings</a>
                                                                 </li>
-                                                                <li class="GLJNiydtUyo4syC1vzraA MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-1j1r6x2">
-                                                                    <a class="tgc-links-inner _3pQ-J4LYnLs4F8dAKi0auR"
-                                                                       href="/en/user/cards">My cards</a></li>
-                                                                <li class="GLJNiydtUyo4syC1vzraA MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-1j1r6x2">
-                                                                    <a class="_3pQ-J4LYnLs4F8dAKi0auR" target="_blank"
-                                                                       rel="noopener noreferrer"
-                                                                       href="https://support.transfergo.com/hc/en-gb">Help</a>
-                                                                </li>
-                                                                <li class="GLJNiydtUyo4syC1vzraA MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-1j1r6x2">
-                                                                    <a class="tgc-links-inner _3pQ-J4LYnLs4F8dAKi0auR"
-                                                                       href="/en/user/rewards">Earnings</a></li>
-                                                                <hr class="MuiDivider-root MuiDivider-fullWidth css-39bbo6">
                                                                 <li class="GLJNiydtUyo4syC1vzraA MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-1j1r6x2">
                                                                 <span class="tgc-links-action _3pQ-J4LYnLs4F8dAKi0auR"
                                                                       role="button" tabindex="0" onclick="event.preventDefault();

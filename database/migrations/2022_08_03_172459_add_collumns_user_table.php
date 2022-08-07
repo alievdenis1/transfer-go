@@ -18,8 +18,10 @@ return new class extends Migration
             $table->string('last_name')->nullable();
             $table->timestamp('date_birth')->nullable();
             $table->string('phone_number')->nullable();
+            $table->string('country')->nullable();
+            $table->string('address')->nullable();
             $table->string('city')->nullable();
-            $table->string('Postcode')->nullable();
+            $table->string('postcode')->nullable();
         });
     }
 
@@ -35,8 +37,10 @@ return new class extends Migration
             $table->dropColumn('last_name');
             $table->dropColumn('date_birth');
             $table->dropColumn('phone_number');
+            $table->dropColumn('country');
+            $table->dropColumn('address');
             $table->dropColumn('city');
-            $table->dropColumn('Postcode');
+            $table->dropColumn('postcode');
         });
     }
 };
