@@ -3,6 +3,15 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+import Vue from 'vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import vClickOutside from 'v-click-outside'
+
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
+Vue.use(vClickOutside)
 
 require('./bootstrap');
 
@@ -20,6 +29,7 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('contact-form', require('./components/ContactForm.vue').default);
+Vue.component('app', require('./components/app.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
