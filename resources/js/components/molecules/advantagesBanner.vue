@@ -2,8 +2,8 @@
     <div class="_2R2Z7PNeJ740Gip52QIdDi" role="button"
          tabindex="0">
         <div class="Pwnkz--vYj8HO5JVHSPFW"><span
-            class="_3t1q3yscGxnwarjKBevSpt _3e-fIT4AwXnaAAahr8BXVU">Our <strong>best ever</strong> exchange rates <span>+ zero fees</span> on your first 2 transfers</span>
-        </div>
+            class="_3t1q3yscGxnwarjKBevSpt _3e-fIT4AwXnaAAahr8BXVU">
+                Наши <strong>лучшие </strong> обменные курсы <span>+ нулевые комиссии</span> при ваших первых двух переводах</span>        </div>
         <div title="" role="button" aria-label="animation"
              tabindex="0"
              style="width: 100%; height: 100%; overflow: hidden; margin: 0px auto; outline: none; border-radius: 8px;">

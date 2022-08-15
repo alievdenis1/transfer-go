@@ -1,7 +1,7 @@
 <template>
     <div>
-    <div class="tgc-lie-theme-section-heading"><span>Choose when to deliver:</span><span
-        tabindex="0" role="button" class="learn-more">Learn more</span>
+    <div class="tgc-lie-theme-section-heading"><span>Выберите время доставки:</span><span
+        tabindex="0" role="button" class="learn-more">Узнать больше</span>
     </div>
     <div class="tgc-delivery-options">
         <div class="do-list">
@@ -26,9 +26,9 @@
                         <div class="do-name">
                             <div class="name"><span
                                 class="emoji">🎁</span><span
-                                class="updated-delivery-option-title">Standard</span>
+                                class="updated-delivery-option-title">Стандарт</span>
                                 <span
-                                    class="updated-delivery-option-description">(Delivered <b>tomorrow</b>, by 20:30)</span>
+                                    class="updated-delivery-option-description">(Перевод <b>завтра</b>, в 20:30)</span>
                                 <div class="info-icon">
                                     <div
                                         class="tgc-simple-tooltip long">
@@ -36,14 +36,7 @@
                                             class="tooltip--container">
                                             <div
                                                 class="tooltip--text">
-                                                Your money
-                                                will reach
-                                                your
-                                                receiver’s
-                                                bank account
-                                                on the next
-                                                business
-                                                day.
+                                                Ваши деньги поступят на банковский счет получателя на следующий рабочий день.
                                             </div>
                                             <div
                                                 class="tooltip--tip"></div>
@@ -73,7 +66,7 @@
                                 class="tgc-amount">£0.99</span>
                             </div>
                             <div class="current-fee free">
-                                Free
+                                Бесплатно
                             </div>
                         </div>
                     </div>
@@ -97,13 +90,13 @@
                         <div class="do-name">
                             <div class="name"><span
                                 class="emoji">⚡</span><span
-                                class="updated-delivery-option-title">Now</span>
+                                class="updated-delivery-option-title">Сейчас</span>
                                 <span
-                                    class="updated-delivery-option-description">(Delivered within <b>30 minutes</b>)</span>
+                                    class="updated-delivery-option-description">(Перевод в течении <b>30 минут</b>)</span>
                             </div>
                         </div>
                         <div class="option-description">
-                            Currently not available
+                            В настоящее время недоступно
                         </div>
                     </div>
                     <div class="do-fee discounted free">
@@ -113,7 +106,7 @@
                                 class="tgc-amount">£1.49</span>
                             </div>
                             <div class="current-fee free">
-                                Free
+                                Бесплатно
                             </div>
                         </div>
                     </div>

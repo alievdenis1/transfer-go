@@ -14,11 +14,11 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">Id</th>
-                                            <th scope="col">Name</th>
+                                            <th scope="col">Имя</th>
                                             <th scope="col">Email</th>
-                                            <th scope="col">Min sum</th>
-                                            <th scope="col">Orders</th>
-                                            <th scope="col">Edit</th>
+                                            <th scope="col">Минимальная сумма</th>
+                                            <th scope="col">Транзакции</th>
+                                            <th scope="col">Изменить</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -28,7 +28,7 @@
                                                 <th scope="row">{{ $user['id'] }}</th>
                                                 <th scope="row">{{ $user['name'] }} {{ $user['last_name'] }}</th>
                                                 <th scope="row">{{ $user['email'] }}</th>
-                                                <th scope="row">{{ $user['min_payment'] ?? 100 }}</th>
+                                                <th scope="row">{{ $user['min_payment'] ?? 100 }} $</th>
                                                 <th scope="row">
                                                     <a href="<?= '/admin/users/' . $user['id'] . '/orders'?>"> orders</a>
                                                 </th>

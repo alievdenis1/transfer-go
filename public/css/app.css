@@ -29688,7 +29688,7 @@ input[type='numeric'].tgc-calculator-select-amount:focus {
 .tgc-payment-option-badge {
     display: flex;
     align-items: center;
-    width: 44%;
+    width: 60%;
     font-size: 12px;
     margin-left: 16px;
     min-height: 45px;

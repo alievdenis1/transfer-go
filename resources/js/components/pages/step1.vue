@@ -3,7 +3,7 @@
         <div class="content-cell">
             <div class="tgc-booking-steps-transfer">
                 <div class="tgc-booking-views-page">
-                    <h1 class="title">1. Transfer details</h1>
+                    <h1 class="title">1. Детали перевода</h1>
                     <div class="calculator-container">
                         <div class="full-height-container">
                             <div class="tgc-calculator lie-calculator">
@@ -14,13 +14,13 @@
                                             tabindex="0" role="button"
                                             class="tgc-tab-label"
                                             :class="{active: !isLocal}"
-                                            data-qa="transfer-international"><span>International</span>
+                                            data-qa="transfer-international"><span>Международный</span>
                                         </li>
                                         <li
                                             @click="setLocal(true)"
                                             tabindex="0" role="button" class="tgc-tab-label"
                                             :class="{active: isLocal}"
-                                            data-qa="transfer-local"><span>Local</span></li>
+                                            data-qa="transfer-local"><span>Местный</span></li>
                                     </ul>
                                 </section>
                                 <div class="calculator-content" v-if="!isLocal">
@@ -171,9 +171,9 @@
                                                     <div class="tooltip--tip"></div>
                                                 </div>
                                                 <div class="tooltip--source"><span
-                                                    class="delivery-fee text-medium fee-hover">Delivery fee: <span
+                                                    class="delivery-fee text-medium fee-hover">Стоимость перевода: <span
                                                     autocomplete="amount-input"
-                                                    class="tgc-amount">£0.00</span></span>
+                                                    class="tgc-amount">0.00</span></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -252,16 +252,16 @@
                                     tabindex="0"
                                     type="button"
                                     data-qa="continue-button">
-                                    <span class="">Continue</span>
+                                    <span class="">Продолжить</span>
                                 </button>
                             </div>
                         </div>
                         <div class="tgc-payment-option-badges">
                             <div class="tgc-lie-theme-section-heading section-heading">
-                                Available payment methods
+                                Доступные способы оплаты
                             </div>
                             <div class="options-heading">
-                                <div>Available payment methods</div>
+                                <div>Доступные способы оплаты</div>
                             </div>
                             <div class="options">
                                 <div class="tgc-payment-option-badge">
@@ -284,19 +284,9 @@
                                         </svg>
                                     </div>
                                     <div class="option-info">
-                                        <div class="option-name">Debit or credit card</div>
+                                        <div class="option-name">Дебетовая или кредитная карта</div>
                                         <div class="option-decription"></div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="secure-payment-block">
-                            <div class="tgc-secure-payment">
-                                <div class="text">Your information is encrypted, private and
-                                    secure.
-                                </div>
-                                <div class="logo-wrapper">
-                                    <div class="secure-payment-logo"></div>
                                 </div>
                             </div>
                         </div>

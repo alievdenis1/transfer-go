@@ -66,58 +66,6 @@
                                         </li>
                                     </nav>
                                     <footer class="MuiList-root Y-CbHi_tF5AsVsdxJUDfk css-1uzmcsd">
-                                        <li class="MuiListItem-root MuiListItem-dense MuiListItem-padding css-e6ueh4">
-                                            <button class="KqqqZMFlP5kpl8-ypKhNs MuiButton-root MuiButton-text MuiButton-textPrimary _2KO771hNtFGmAQoidtWkkA MuiButton-sizeSmall _2HrONIpPWKXypvO9bjHj8J MuiButton-textSizeSmall MuiButton-disableElevation MuiButtonBase-root  css-1nitmzb"
-                                                    tabindex="0" type="button" data-qa="selected-language"><span
-                                                    class="_2Eb53JKKc_yIPNODC8m30X MuiButton-startIcon MuiButton-iconSizeSmall css-u0g51i"><svg
-                                                        viewBox="0 0 16 12" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="12"><mask
-                                                            id="mask0gb" maskUnits="userSpaceOnUse" x="0" y="0"
-                                                            width="16" height="12"><rect width="16" height="12"
-                                                                                         rx="4" fill="#fff"></rect></mask><g
-                                                            mask="url(#mask0gb)"><path fill-rule="evenodd"
-                                                                                       clip-rule="evenodd"
-                                                                                       d="M0 0v12h16V0H0z"
-                                                                                       fill="#2E42A5"></path><mask
-                                                                id="mask1gb" maskUnits="userSpaceOnUse" x="0" y="0"
-                                                                width="16" height="12"><path fill-rule="evenodd"
-                                                                                             clip-rule="evenodd"
-                                                                                             d="M0 0v12h16V0H0z"
-                                                                                             fill="#fff"></path></mask><g
-                                                                mask="url(#mask1gb)"><mask id="mask2gb"
-                                                                                           maskUnits="userSpaceOnUse"
-                                                                                           x="0" y="0" width="16"
-                                                                                           height="12"><path
-                                                                        fill="#fff" d="M0 0h16v12H0z"></path></mask><g
-                                                                    mask="url(#mask2gb)"><path
-                                                                        d="M-1.782 11.143l3.521 1.489L16.08 1.619l1.858-2.213-3.765-.498-5.85 4.746-4.707 3.198-5.397 4.29z"
-                                                                        fill="#fff"></path><path
-                                                                        d="M-1.3 12.186l1.794.864L17.27-.8H14.75l-16.05 12.986z"
-                                                                        fill="#F50100"></path><path
-                                                                        d="M17.782 11.143l-3.521 1.489L-.08 1.619-1.938-.594l3.765-.498 5.85 4.746 4.707 3.198 5.397 4.29z"
-                                                                        fill="#fff"></path><path
-                                                                        d="M17.662 11.891l-1.794.864-7.143-5.93-2.118-.662-8.723-6.75H.403l8.717 6.59 2.316.794 6.226 5.094z"
-                                                                        fill="#F50100"></path><mask
-                                                                        id="path-9-inside-1gb" fill="#fff"><path
-                                                                            fill-rule="evenodd" clip-rule="evenodd"
-                                                                            d="M9.889-1H6.11v5H-.986v4H6.11v5h3.778V8h7.125V4H9.889v-5z"></path></mask><path
-                                                                        fill-rule="evenodd" clip-rule="evenodd"
-                                                                        d="M9.889-1H6.11v5H-.986v4H6.11v5h3.778V8h7.125V4H9.889v-5z"
-                                                                        fill="#F50100"></path><path
-                                                                        d="M6.111-1v-1h-1v1h1zm3.778 0h1v-1h-1v1zM6.11 4v1h1V4h-1zM-.986 4V3h-1v1h1zm0 4h-1v1h1V8zM6.11 8h1V7h-1v1zm0 5h-1v1h1v-1zm3.778 0v1h1v-1h-1zm0-5V7h-1v1h1zm7.125 0v1h1V8h-1zm0-4h1V3h-1v1zM9.889 4h-1v1h1V4zM6.11 0h3.778v-2H6.11v2zm1 4v-5h-2v5h2zM-.986 5H6.11V3H-.986v2zm1 3V4h-2v4h2zM6.11 7H-.986v2H6.11V7zm1 6V8h-2v5h2zm2.778-1H6.11v2h3.778v-2zm-1-4v5h2V8h-2zm8.125-1H9.889v2h7.125V7zm-1-3v4h2V4h-2zM9.889 5h7.125V3H9.889v2zm-1-6v5h2v-5h-2z"
-                                                                        fill="#fff"
-                                                                        mask="url(#path-9-inside-1gb)"></path></g></g></g><rect
-                                                            opacity=".64" x=".5" y=".5" width="15" height="11"
-                                                            rx="3.5" stroke="#EDF0F4"></rect></svg></span><span
-                                                    class="">EN</span><span
-                                                    class="MuiButton-endIcon MuiButton-iconSizeSmall css-hqw408"><svg
-                                                        width="8" height="4" viewBox="0 0 8 4" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg"><path d="M1 .5l3 3 3-3"
-                                                                                                 stroke="#A2ABB8"
-                                                                                                 stroke-linecap="round"
-                                                                                                 stroke-linejoin="round"></path></svg></span>
-                                            </button>
-                                        </li>
                                     </footer>
                                 </section>
                             </div>

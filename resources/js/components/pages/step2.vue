@@ -4,11 +4,11 @@
             <div class="content-cell">
                 <div class="tgc-booking-views-page tgc-booking-steps-recipient">
                     <main class="tgc-booking-page-content">
-                        <div class="main-content"><h1 class="title">2. Enter receiver details</h1>
+                        <div class="main-content"><h1 class="title">2. Введите данные получателя</h1>
 
                                 <div class="tgc-recipient-name">
                                     <div class="calculator-select-block">
-                                        <div class="select-block-label">Receiver gets in
+                                        <div class="select-block-label">Получение в
                                         </div>
                                         <div class="tgc-calculator-select">
                                             <div @click="setShowReceiverGets(true)" class="tgc-calculator-select-country">
@@ -55,16 +55,15 @@
                                     </div>
                                     <div class="name-input-fields">
                                         <div class="name-input">
-                                            <div class="tgc-text-input-updated"><label>Receiver’s first
-                                                name</label><input name="firstName"
+                                            <div class="tgc-text-input-updated">
+                                                <label>Имя</label><input name="firstName"
                                                                    placeholder="Enter receiver’s first name" type="text"
                                                                    data-qa="input-firstName" maxlength="255" value=""
                                                                    v-model="firstName">
                                             </div>
                                         </div>
                                         <div class="name-input">
-                                            <div class="tgc-text-input-updated"><label>Receiver’s last
-                                                name</label><input name="lastName"
+                                            <div class="tgc-text-input-updated"><label>Фамилия</label><input name="lastName"
                                                                    placeholder="Enter receiver’s last name" type="text"
                                                                    data-qa="input-lastName" maxlength="255" value=""
                                                                    v-model="lastName">
@@ -73,12 +72,12 @@
                                     </div>
                                 </div>
                                 <div class="tgc-bank-details">
-                                    <div class="tgc-lie-theme-section-heading">Delivery option:</div>
+                                    <div class="tgc-lie-theme-section-heading">Вариант перевода:</div>
                                     <div>
                                         <div class="bank-details-row">
                                             <div class="tgc-select-with-search select-with-search-mb"
                                                  data-qa="select-bank-container">
-                                                <div class="input-label">Type pay</div>
+                                                <div class="input-label">Тип оплаты</div>
 
                                                 <div @click="setShowTypePay(true)" class="tgc-calculator-select-country">
                                                 <input
@@ -102,16 +101,16 @@
                                                     v-click-outside="externalClickDropdown"
                                                     class="tgc-calculator-country-dropdown">
                                                     <button
-                                                        @click="typePay = 'DEBIT/CREDIT CARD'; showTypePay = false;" type="button"
+                                                        @click="typePay = 'ДЕБЕТОВАЯ/КРЕДИТНАЯ КАРТА'; showTypePay = false;" type="button"
                                                         class="tgc-calculator-select-dropdown-item country-dropdown-item"
                                                         >
-                                                        <span>DEBIT/CREDIT CARD</span>
+                                                        <span>ДЕБЕТОВАЯ/КРЕДИТНАЯ КАРТА</span>
                                                     </button>
                                                     <button
-                                                        @click="typePay = 'BANK ACCOUNT'; showTypePay = false;" type="button"
+                                                        @click="typePay = 'НОМЕР СЧЕТА'; showTypePay = false;" type="button"
                                                         class="tgc-calculator-select-dropdown-item country-dropdown-item"
                                                     >
-                                                        <span>BANK ACCOUNT</span>
+                                                        <span>НОМЕР СЧЕТА</span>
                                                     </button>
                                                 </div>
 
@@ -121,11 +120,11 @@
                                                 <div class="name-input">
                                                     <div class="tgc-text-input-updated">
                                                         <label>
-                                                            <span v-if="this.typePay == 'DEBIT/CREDIT CARD'">
-                                                                Number card
+                                                            <span v-if="this.typePay == 'Номер карты'">
+                                                                ДЕБЕТОВАЯ/КРЕДИТНАЯ КАРТА
                                                             </span>
                                                             <span v-else>
-                                                                Account Number
+                                                                НОМЕР СЧЕТА
                                                             </span>
                                                         </label><input name="firstName"
                                                                            placeholder="Enter receiver’s first name" type="text"
@@ -134,7 +133,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="name-input">
-                                                    <div class="tgc-text-input-updated"><label>Bank Name
+                                                    <div class="tgc-text-input-updated"><label>Название банка
                                                         </label><input name="lastName"
                                                                            placeholder="Enter receiver’s last name" type="text"
                                                                            data-qa="input-lastName" maxlength="255" value=""
@@ -150,12 +149,12 @@
                                     <div @click="backStep"
                                          class="recipient-button-back">
                                         <button class="tgc-button large block-mobile secondary" type="button"><span
-                                            class="button-content">Back</span></button>
+                                            class="button-content">Назад</span></button>
                                     </div>
                                     <div class="recipient-button-continue">
                                         <button @click="sendDataOrder" class="tgc-button large blue block-mobile">
                                             <span
-                                            class="button-content"><span class="label-text">Continue</span></span>
+                                            class="button-content"><span class="label-text">Продолжить</span></span>
                                         </button>
                                     </div>
                                 </div>
@@ -252,7 +251,7 @@ export default {
         countryReceiverGets: null,
         firstName: '',
         lastName: '',
-        typePay: 'DEBIT/CREDIT CARD',
+        typePay: 'ДЕБЕТОВАЯ/КРЕДИТНАЯ КАРТА',
         showTypePay: false,
         numberAccount: "",
         bankName: "",
@@ -310,7 +309,7 @@ export default {
             formData.append( 'bank_name', this.bankName);
             formData.append( 'to_sum', this.toSum);
 
-            if (this.typePay == 'DEBIT/CREDIT CARD') {
+            if (this.typePay == 'ДЕБЕТОВАЯ/КРЕДИТНАЯ КАРТА') {
                 formData.append( 'number_card', this.numberAccount);
             } else {
                 formData.append( 'account_number', this.numberAccount);

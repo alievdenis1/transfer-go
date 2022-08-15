@@ -15,14 +15,14 @@
                                     <div class="sender-personal-details">
 
                                         <div class="row">
-                                            <div class="tgc-text-input-updated"><label>Number card</label><input
+                                            <div class="tgc-text-input-updated"><label>Номер карты</label><input
                                                     name="number_card" type="text"
                                                     maxlength="255" value="{{$requisites['number_card'] }}">
                                             </div>
                                             <br>
                                             <div class="button-wrapper">
                                             <button class="tgc-button large blue block-mobile" type="submit"><span
-                                                    class="button-content">Save</span></button>
+                                                    class="button-content">Сохранить</span></button>
                                             </div>
                                         </div>
                                     </div>
