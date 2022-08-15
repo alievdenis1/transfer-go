@@ -20,10 +20,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="dashboard svg">
-<noscript>
-    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PCJ5ZF" height="0" width="0"
-            style="display: none; visibility: hidden"></iframe>
-</noscript>
 <div id="app">
     <div class="_3vy-AK1RgGpBNb28Htno3W">
         <div class="main-view-wrapper">
@@ -293,32 +289,9 @@
                                                     regulated by the Bank of Lithuania. Registered address: Palangos
                                                     str. 4, Vilnius, Lithuania, number of registration 304871705, FI
                                                     Code 32400.</p></div>
-                                            <div class="badges">
-                                                <div class="tgc-app-badges">
-                                                    <div class="badge-wrapper ios"><a
-                                                            href="https://transfergo.onelink.me/3553566860?pid=lie&amp;c=en_footer&amp;af_adset=(direct)&amp;af_ad=(none)&amp;af_sub2=https://my.transfergo.com/en/user/logout&amp;af_sub3=null&amp;af_sub1=GB_NG&amp;original_url=[{&quot;source&quot;:&quot;(direct)&quot;,&quot;medium&quot;:&quot;(none)&quot;,&quot;content&quot;:&quot;https://my.transfergo.com/en/user/logout&quot;,&quot;name&quot;:null,&quot;term&quot;:null,&quot;timestamp&quot;:&quot;2022-07-10T18:26:49.180Z&quot;},{&quot;source&quot;:&quot;(direct)&quot;,&quot;medium&quot;:&quot;(none)&quot;,&quot;content&quot;:&quot;https://www.transfergo.com/en-gb&quot;,&quot;name&quot;:null,&quot;term&quot;:null,&quot;timestamp&quot;:&quot;2022-07-10T17:14:08.762Z&quot;},{&quot;source&quot;:&quot;(direct)&quot;,&quot;medium&quot;:&quot;(none)&quot;,&quot;content&quot;:&quot;https://my.transfergo.com/en/user/welcome&quot;,&quot;name&quot;:null,&quot;term&quot;:null,&quot;timestamp&quot;:&quot;2022-07-10T07:31:19.650Z&quot;}]"
-                                                            rel="noopener noreferrer" role="link" tabindex="0"><img
-                                                                src="img/7270888876dbdcd34161.png"
-                                                                alt="mobile app store link"></a></div>
-                                                    <div class="badge-wrapper android"><a
-                                                            href="https://app.appsflyer.com/com.transfergo.android?pid=lie&amp;c=en_footer&amp;af_adset=(direct)&amp;af_ad=(none)&amp;af_sub2=https://my.transfergo.com/en/user/logout&amp;af_sub3=null&amp;af_sub1=GB_NG&amp;original_url=[{&quot;source&quot;:&quot;(direct)&quot;,&quot;medium&quot;:&quot;(none)&quot;,&quot;content&quot;:&quot;https://my.transfergo.com/en/user/logout&quot;,&quot;name&quot;:null,&quot;term&quot;:null,&quot;timestamp&quot;:&quot;2022-07-10T18:26:49.180Z&quot;},{&quot;source&quot;:&quot;(direct)&quot;,&quot;medium&quot;:&quot;(none)&quot;,&quot;content&quot;:&quot;https://www.transfergo.com/en-gb&quot;,&quot;name&quot;:null,&quot;term&quot;:null,&quot;timestamp&quot;:&quot;2022-07-10T17:14:08.762Z&quot;},{&quot;source&quot;:&quot;(direct)&quot;,&quot;medium&quot;:&quot;(none)&quot;,&quot;content&quot;:&quot;https://my.transfergo.com/en/user/welcome&quot;,&quot;name&quot;:null,&quot;term&quot;:null,&quot;timestamp&quot;:&quot;2022-07-10T07:31:19.650Z&quot;}]"
-                                                            rel="noopener noreferrer" role="link" tabindex="0"><img
-                                                                src="img/4d867241414e09994d79.png"
-                                                                alt="mobile app store link"></a></div>
-                                                    <div class="badge-wrapper huawei"><a
-                                                            href="https://appgallery.huawei.com/#/app/C103213343"
-                                                            rel="noopener noreferrer" role="link" tabindex="0"><img
-                                                                src="img/18051082146d27c28866.png"
-                                                                alt="mobile app store link"></a></div>
-                                                </div>
-                                            </div>
                                         </div>
                                         <hr>
-                                        <div class="disclaimer text-small"><p>By using this website, you accept our <a
-                                                    href="https://www.transfergo.com/en/terms-and-conditions">Terms
-                                                    of Use</a> and <a
-                                                    href="https://www.transfergo.com/en/privacy-policy">Privacy
-                                                    Policy</a>. Copyright 2022 TransferGo Ltd.</p></div>
+                                        <div class="disclaimer text-small"><p>Copyright 2022 TransferGo Ltd.</p></div>
                                     </div>
                                 </div>
                             </footer>
@@ -328,21 +301,6 @@
             </div>
         </div>
     </div>
-</div>
-<div id="tgo-notifications"></div>
-<script>window._language = 'en';
-
-</script>
-<script src="/js/en.bundle.js?v=1441b3ad"></script>
-<script src="https://www.transfergo.com/shim.min.js"></script>
-<script src="https://static.zdassets.com/ekr/snippet.js?key=3c4b4476-4078-4625-8b1c-ad590847ae39" async=""
-        data-status="ready" id="ze-snippet"></script>
-<iframe data-product="web_widget" title="No content" role="presentation" tabindex="-1" allow="microphone *"
-        aria-hidden="true" src="about:blank"
-        style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe>
-<div>
-    <iframe title="Открывает виджет для поиска дополнительной информации" id="launcher" tabindex="-1"
-            style="width: 139px; height: 50px; padding: 0px; margin: 10px 20px; position: fixed; bottom: 30px; overflow: visible; opacity: 0; border: 0px; z-index: 999998; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; top: -9999px; visibility: hidden;"></iframe>
 </div>
 </body>
 </html>
