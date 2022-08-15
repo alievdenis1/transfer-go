@@ -52,7 +52,7 @@
                                             <a class="_1dZ3_E1uyq1SDOhbJ9YkTB MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-disableElevation MuiButton-fullWidth MuiButtonBase-root _1ABOKPkszDZESmnSM6q50K _308ge9eeJb_IyaGLvyIFvJ css-li77ye _2aQm2mrJyNyMlLVw1hNrA0"
                                                tabindex="0" data-qa="navigation-home" href="/admin">
                                                 <span class="_3F1mtacvw4BxMMtmokZDzR MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel">
-                                                    <span>Users</span>
+                                                    <span>Пользователи</span>
                                                 </span>
                                             </a>
                                         </li>
@@ -61,7 +61,7 @@
                                             <a class="_1dZ3_E1uyq1SDOhbJ9YkTB MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-disableElevation MuiButton-fullWidth MuiButtonBase-root _1ABOKPkszDZESmnSM6q50K _308ge9eeJb_IyaGLvyIFvJ css-li77ye _2aQm2mrJyNyMlLVw1hNrA0"
                                                tabindex="0" data-qa="navigation-home" href="/admin/requisites">
                                                 <span class="_3F1mtacvw4BxMMtmokZDzR MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel">
-                                                    <span>Requisites</span>
+                                                    <span>Реквизиты</span>
                                                 </span>
                                             </a>
                                         </li>

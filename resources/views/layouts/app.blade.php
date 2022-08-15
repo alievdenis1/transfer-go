@@ -50,53 +50,20 @@
                                     <nav class="MuiList-root MuiList-padding _15TpWECg-EPjPycXG7DXc_ css-1ontqvh">
                                         <li class="MuiListItem-root MuiListItem-gutters MuiListItem-padding _11btEvZNBcBdY7ZO05v6pz css-1rr1cwd">
                                             <a class="_1dZ3_E1uyq1SDOhbJ9YkTB MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-disableElevation MuiButton-fullWidth MuiButtonBase-root _1ABOKPkszDZESmnSM6q50K _308ge9eeJb_IyaGLvyIFvJ css-li77ye _2aQm2mrJyNyMlLVw1hNrA0"
-                                               tabindex="0" data-qa="navigation-home" href="/en/user/dashboard"><span
-                                                    class="_3F1mtacvw4BxMMtmokZDzR MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel"><svg
-                                                        width="24" height="24" viewBox="0 0 24 24"
-                                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path
-                                                            d="M12.434 2.351a1.2 1.2 0 00-1.697 0l-8.4 8.4a1.2 1.2 0 001.697 1.697l.351-.351V20a1.2 1.2 0 001.2 1.2h2.4a1.2 1.2 0 001.2-1.2v-2.4a1.2 1.2 0 011.2-1.2h2.4a1.2 1.2 0 011.2 1.2V20a1.2 1.2 0 001.2 1.2h2.4a1.2 1.2 0 001.2-1.2v-7.903l.352.351a1.2 1.2 0 001.697-1.697l-8.4-8.4z"></path></svg></span><span
-                                                    class=""><span>Home</span></span></a></li>
+                                               tabindex="0" data-qa="navigation-home" href="/">
+                                                <span class="_3F1mtacvw4BxMMtmokZDzR MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel">
+                                                </span>
+                                                <span class=""><span>Перевести деньги</span></span>
+                                            </a>
+                                        </li>
                                         <li class="MuiListItem-root MuiListItem-gutters MuiListItem-padding _11btEvZNBcBdY7ZO05v6pz css-1rr1cwd">
-                                            <a class="_1dZ3_E1uyq1SDOhbJ9YkTB MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-disableElevation MuiButton-fullWidth MuiButtonBase-root _1ABOKPkszDZESmnSM6q50K _8WEEHML83_U6t0Og1cNK css-li77ye"
-                                               tabindex="0" role="button" data-qa="navigation-create-new-booking"><span
-                                                    class="_3F1mtacvw4BxMMtmokZDzR MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel"><svg
-                                                        width="24" height="24" viewBox="0 0 24 24"
-                                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path
-                                                            fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10zm-7.172-3.828a1 1 0 011 1v5.656a1 1 0 11-2 0v-3.242l-3.95 3.95a1 1 0 11-1.414-1.415l3.95-3.95H9.172a1 1 0 010-2h5.656z"></path></svg></span><span
-                                                    class="">Send money</span></a></li>
-                                        <li class="MuiListItem-root MuiListItem-gutters MuiListItem-padding _11btEvZNBcBdY7ZO05v6pz css-1rr1cwd">
-                                            <a class="_1dZ3_E1uyq1SDOhbJ9YkTB MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-disableElevation MuiButton-fullWidth MuiButtonBase-root _1ABOKPkszDZESmnSM6q50K _308ge9eeJb_IyaGLvyIFvJ css-li77ye"
-                                               tabindex="0" data-qa="navigation-receivers"
-                                               href="/en/user/recipients"><span
-                                                    class="_3F1mtacvw4BxMMtmokZDzR MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel"><svg
-                                                        width="24" height="24" viewBox="0 0 24 24"
-                                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path
-                                                            d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><path
-                                                            d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z"
-                                                            stroke="currentColor" stroke-width="2"
-                                                            stroke-linecap="round" stroke-linejoin="round"></path><path
-                                                            d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"
-                                                            stroke="currentColor" stroke-width="2"
-                                                            stroke-linecap="round" stroke-linejoin="round"
-                                                            fill="none"></path><path d="M1 20h16v2H1z"></path></svg></span><span
-                                                    class=""><span>Receivers</span></span></a></li>
-                                        <li class="MuiListItem-root MuiListItem-gutters MuiListItem-padding _11btEvZNBcBdY7ZO05v6pz css-1rr1cwd">
-                                            <a class="_1dZ3_E1uyq1SDOhbJ9YkTB MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-disableElevation MuiButton-fullWidth MuiButtonBase-root _1ABOKPkszDZESmnSM6q50K _2LLO_FALo7qZhxYjsTfrcD css-li77ye"
-                                               tabindex="0" data-qa="navigation-invite-and-earn"
-                                               href="/en/user/referrals"><span
-                                                    class="_3F1mtacvw4BxMMtmokZDzR MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel"><svg
-                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg"><path d="M22 7H2v5h20V7z"
-                                                                                                 fill="currentColor"></path><path
-                                                            fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M20 22v-9h-7v9h7zm-9 0v-9H4v9h7z"
-                                                            fill="currentColor"></path><path
-                                                            d="M12 7H7.5a2.5 2.5 0 110-5C11 2 12 7 12 7zm0 0h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"
-                                                            fill="transparent" stroke="currentColor"
-                                                            stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round"></path></svg></span><span
-                                                    class=""><span>Invite &amp; earn ₴750</span></span></a></li>
+                                            <a class="_1dZ3_E1uyq1SDOhbJ9YkTB MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-disableElevation MuiButton-fullWidth MuiButtonBase-root _1ABOKPkszDZESmnSM6q50K _308ge9eeJb_IyaGLvyIFvJ css-li77ye _2aQm2mrJyNyMlLVw1hNrA0"
+                                               tabindex="0" data-qa="navigation-home" href="/transactions">
+                                                <span class="_3F1mtacvw4BxMMtmokZDzR MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel">
+                                                </span>
+                                                <span class=""><span>Мои транзакции</span></span>
+                                            </a>
+                                        </li>
                                     </nav>
                                     <footer class="MuiList-root Y-CbHi_tF5AsVsdxJUDfk css-1uzmcsd">
                                         <li class="MuiListItem-root MuiListItem-dense MuiListItem-padding css-e6ueh4">
@@ -160,7 +127,7 @@
                         <header class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionSticky _38nTFKANjSZ6euSwvFPDVJ _3_cGvCaiW2QflAzgtcon6x css-i1u6zi">
                             <div class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap _2Iz2AjNzRvML8os-5Y74Dn css-jgm9a3">
                                 <div class="MuiGrid-root MuiGrid-item _2zExeO6po3w07gwFY2gmBY css-1wxaqej"><h4
-                                        class="MuiTypography-root MuiTypography-h4 css-16svqnm"><span>Home</span>
+                                        class="MuiTypography-root MuiTypography-h4 css-16svqnm">
                                     </h4></div>
                                 <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
                                     <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-wrap-xs-nowrap css-zo3lhu">
@@ -237,19 +204,19 @@
                                                                 @role('Admin')
                                                                     <li class="GLJNiydtUyo4syC1vzraA MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-1j1r6x2">
                                                                         <a class="tgc-links-inner _3pQ-J4LYnLs4F8dAKi0auR"
-                                                                           href="/admin">Admin</a></li>
+                                                                           href="/admin">Админ панель</a></li>
                                                                 @endrole
 
 
                                                                 <li class="GLJNiydtUyo4syC1vzraA MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-1j1r6x2">
                                                                     <a class="tgc-links-inner _3pQ-J4LYnLs4F8dAKi0auR"
-                                                                       href="/settings">Settings</a>
+                                                                       href="/settings">Настройки</a>
                                                                 </li>
                                                                 <li class="GLJNiydtUyo4syC1vzraA MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-1j1r6x2">
                                                                 <span class="tgc-links-action _3pQ-J4LYnLs4F8dAKi0auR"
                                                                       role="button" tabindex="0" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"
-                                                                      data-qa="navigation-logout">Log out</span></li>
+                                                                      data-qa="navigation-logout">Выйти</span></li>
                                                             </nav>
                                                         </div>
                                                     </div>

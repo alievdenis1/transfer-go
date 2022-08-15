@@ -7,16 +7,20 @@
                 <div class="container container-empty-dashboard">
                     <div class="tgc-empty-dashboard-state">
                         <div class="tgc-empty-dashboard-welcome-simple with-notification">
-                            <div class="welcome-text-container"><h1 class="welcome-title">Ready for
-                                    your first transfer?</h1>
-                                <p class="welcome-text">It only takes a minute. Just click on the
-                                    blue button below.</p>
+                            <div class="welcome-text-container">
+                                <h1 class="welcome-title">
+                                    Готовы сделать перевод?
+                                </h1>
+                                <p class="welcome-text">
+                                    Это займет всего минуту. Просто нажмите на
+                                    синюю кнопку ниже.
+                                </p>
                                 <div class="transfer-button-container">
                                     <a href="{{ route('app') }}">
                                     <button
                                         class="tgc-button large blue block-desktop transfer-button"
                                         type="button"><span
-                                            class="button-content">Transfer money</span></button>
+                                            class="button-content">Перевести деньги</span></button>
                                     </a>
                                     <svg viewBox="0 0 75 132" xmlns="http://www.w3.org/2000/svg"
                                          class="transfer-arrow">
