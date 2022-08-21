@@ -83,14 +83,14 @@
                                             @if (Route::has('login'))
                                                 <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
                                                     <a class=""
-                                                       href="{{ route('login') }}">{{ __('Login') }}</a>
+                                                       href="{{ route('login') }}">Логин</a>
                                                 </div>
                                             @endif
 
                                             @if (Route::has('register'))
                                                 <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
                                                     <a class=""
-                                                       href="{{ route('register') }}">{{ __('Register') }}</a>
+                                                       href="{{ route('register') }}">Регистрация</a>
                                                 </div>
                                             @endif
                                         @else
