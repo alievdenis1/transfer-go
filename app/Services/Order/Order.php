@@ -18,7 +18,11 @@ class Order extends Model
         }
 
         $user = User::find($fields['user_id']);
-        return $user->orders()->save($order)->toArray();
+
+        $orderArray = $user->orders()->save($order)->toArray();
+        $orderArray['created_at'] =  date('d-m-Y', strtotime($orderArray['created_at'] . ' +1 day'));
+
+        return $orderArray;
     }
 
     public function deleteOrder(int $id)
@@ -32,6 +36,10 @@ class Order extends Model
             $order->$key = $field;
         }
         $order->save();
-        return $order->toArray();
+
+        $orderArray = $order->toArray();
+        $orderArray['created_at'] =  date('d-m-Y', strtotime($orderArray['created_at'] . ' +1 day'));
+
+        return $orderArray;
     }
 }

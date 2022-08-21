@@ -144,13 +144,13 @@
                                     </div>
                                 </div>
                                 <div class="tgc-summary-block with-divider">
-                                    <div class="label">Курс валют</div>
+                                    <div class="label">Курс обмена</div>
                                     <div class="value-block">
                                         <div class="value ">{{userOrder.exchange_rate}}</div>
                                     </div>
                                 </div>
                                 <div class="tgc-summary-block with-divider">
-                                    <div class="label">Стоиомть перевода</div>
+                                    <div class="label">Стоимость перевода</div>
                                     <div class="value-block">
                                         <div class="value discounted"><span autocomplete="amount-input"
                                                                             class="tgc-amount">0</span></div>

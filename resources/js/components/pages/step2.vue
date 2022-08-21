@@ -192,7 +192,7 @@
                                     <div class="label">Перевод</div>
                                     <div class="value-block">
                                         <div class="value ">{{userOrder.created_at}}</div>
-                                        <div class="sub-value">Standard</div>
+                                        <div class="sub-value">Стандарт</div>
                                     </div>
                                 </div>
                                 <div class="tgc-summary-block with-divider">
