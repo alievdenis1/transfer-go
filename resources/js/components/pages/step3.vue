@@ -181,7 +181,7 @@ export default {
     }),
     methods: {
         getIconByCountrySlag(countrySlug) {
-            return 'background-image: url(https://www.transfergo.com/static/images/flags/svg/' + countrySlug + '.svg);';
+            return 'background-image: url(/img/' + countrySlug + '.svg);';
         },
         backStep() {
             this.$emit('back', 2);

@@ -274,7 +274,7 @@ export default {
             this.$emit('back', 1);
         },
         getIconByCountrySlag(countrySlug) {
-            return 'background-image: url(https://www.transfergo.com/static/images/flags/svg/' + countrySlug + '.svg);';
+            return 'background-image: url(/img/' + countrySlug + '.svg);';
         },
         sendDataOrder() {
             const formData = new FormData();

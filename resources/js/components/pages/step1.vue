@@ -433,7 +433,7 @@ export default {
             return country.slug + ' • ' + country.currency.slug
         },
         getIconByCountrySlag(countrySlug) {
-            return 'background-image: url(https://www.transfergo.com/static/images/flags/svg/' + countrySlug + '.svg);';
+            return 'background-image: url(/img/' + countrySlug + '.svg);';
         },
         externalClickDropdown() {
             this.showSendingFrom = false;

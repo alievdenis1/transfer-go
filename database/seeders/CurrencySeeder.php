@@ -59,6 +59,18 @@ class CurrencySeeder extends Seeder
                 'name' => 'United States Dollar',
                 'slug' => 'USD'
             ],
+            [
+                'name' => 'Canadian Dollar',
+                'slug' => 'CAD'
+            ],
+            [
+                'name' => 'Ukrainian hryvnia',
+                'slug' => 'UAH'
+            ],
+            [
+                'name' => 'Russian ruble',
+                'slug' => 'RUB'
+            ],
         ];
 
         foreach ($currencies as $itemCurrency) {

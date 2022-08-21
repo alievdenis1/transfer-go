@@ -17,7 +17,28 @@ class CountriesSeeder extends Seeder
     {
         $countries = [
             [
-                'name' => 'Poland',
+                'name' => 'Россия',
+                'slug' => 'RU',
+                'currencies' => [
+                    'RUB',
+                ]
+            ],
+            [
+                'name' => 'Украина',
+                'slug' => 'UA',
+                'currencies' => [
+                    'UAH',
+                ]
+            ],
+            [
+                'name' => 'США',
+                'slug' => 'US',
+                'currencies' => [
+                    'USD',
+                ]
+            ],
+            [
+                'name' => 'Польша',
                 'slug' => 'PL',
                 'currencies' => [
                     'EUR',
@@ -25,14 +46,28 @@ class CountriesSeeder extends Seeder
                 ]
             ],
             [
-                'name' => 'Great Britain',
+                'name' => 'Германия',
+                'slug' => 'DE',
+                'currencies' => [
+                    'EUR',
+                ]
+            ],
+            [
+                'name' => 'Канада',
+                'slug' => 'CA',
+                'currencies' => [
+                    'CAD',
+                ]
+            ],
+            [
+                'name' => 'Британия',
                 'slug' => 'GB',
                 'currencies' => [
                     'GBP',
                 ]
             ],
             [
-                'name' => 'Hungary',
+                'name' => 'Венгрия',
                 'slug' => 'HU',
                 'currencies' => [
                     'EUR',
@@ -40,35 +75,28 @@ class CountriesSeeder extends Seeder
                 ]
             ],
             [
-                'name' => 'Austria',
+                'name' => 'Австрия',
                 'slug' => 'AT',
                 'currencies' => [
                     'EUR',
                 ]
             ],
             [
-                'name' => 'Belgium',
+                'name' => 'Бельгия',
                 'slug' => 'BE',
                 'currencies' => [
                     'EUR',
                 ]
             ],
             [
-                'name' => 'Germany',
-                'slug' => 'GE',
-                'currencies' => [
-                    'EUR',
-                ]
-            ],
-            [
-                'name' => 'Greece',
+                'name' => 'Греция',
                 'slug' => 'GR',
                 'currencies' => [
                     'EUR',
                 ]
             ],
             [
-                'name' => 'Denmark',
+                'name' => 'Дания',
                 'slug' => 'DK',
                 'currencies' => [
                     'EUR',
@@ -76,49 +104,49 @@ class CountriesSeeder extends Seeder
                 ]
             ],
             [
-                'name' => 'Irish',
+                'name' => 'Ирландия',
                 'slug' => 'IE',
                 'currencies' => [
                     'EUR',
                 ]
             ],
             [
-                'name' => 'Spain',
+                'name' => 'Испания',
                 'slug' => 'ES',
                 'currencies' => [
                     'EUR',
                 ]
             ],
             [
-                'name' => 'Italy',
+                'name' => 'Италия',
                 'slug' => 'IT',
                 'currencies' => [
                     'EUR',
                 ]
             ],
             [
-                'name' => 'Cyprus',
+                'name' => 'Кипр',
                 'slug' => 'CY',
                 'currencies' => [
                     'EUR',
                 ]
             ],
             [
-                'name' => 'Latvia',
+                'name' => 'Латвия',
                 'slug' => 'LV',
                 'currencies' => [
                     'EUR',
                 ]
             ],
             [
-                'name' => 'Lithuania',
+                'name' => 'Литва',
                 'slug' => 'LT',
                 'currencies' => [
                     'EUR',
                 ]
             ],
             [
-                'name' => 'Norway',
+                'name' => 'Норвегия',
                 'slug' => 'NO',
                 'currencies' => [
                     'EUR',
@@ -126,28 +154,21 @@ class CountriesSeeder extends Seeder
                 ]
             ],
             [
-                'name' => 'Netherlands',
+                'name' => 'Нидерланды',
                 'slug' => 'NL',
                 'currencies' => [
                     'EUR',
                 ]
             ],
             [
-                'name' => 'France',
+                'name' => 'Франция',
                 'slug' => 'FR',
                 'currencies' => [
                     'EUR',
                 ]
             ],
             [
-                'name' => 'Lithuania',
-                'slug' => 'LT',
-                'currencies' => [
-                    'EUR',
-                ]
-            ],
-            [
-                'name' => 'Sweden',
+                'name' => 'Швеция',
                 'slug' => 'SE',
                 'currencies' => [
                     'EUR',
@@ -155,7 +176,7 @@ class CountriesSeeder extends Seeder
                 ]
             ],
             [
-                'name' => 'Czech',
+                'name' => 'Чехия',
                 'slug' => 'CZ',
                 'currencies' => [
                     'EUR',
@@ -163,8 +184,8 @@ class CountriesSeeder extends Seeder
                 ]
             ],
             [
-                'name' => 'Turkey',
-                'slug' => 'CZ',
+                'name' => 'Турция',
+                'slug' => 'TR',
                 'currencies' => [
                     'TRY',
                 ]
