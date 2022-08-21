@@ -98,10 +98,14 @@
 
                                             <div
                                                 class="tgc-amount-currency-input-container">
-                                                <input inputmode="decimal"
-                                                       autocomplete="amount-input"
+                                                <input autocomplete="amount-input"
                                                        class="tgc-amount tgc-calculator-select-amount q-calculator-from-amount-select amount-input no-currency-selection"
-                                                       type="number" v-model="sendingFromSum"></div>
+                                                       type="text"
+                                                       inputmode="numeric"
+                                                       v-model="sendingFromSum"
+                                                       @input="sumChange('sendingInput')"
+                                                       ref="sendingInput"
+                                                ></div>
                                         </div>
                                     </div>
 
@@ -156,7 +160,10 @@
                                                 <input inputmode="decimal"
                                                        autocomplete="amount-input"
                                                        class="tgc-amount tgc-calculator-select-amount q-calculator-from-amount-select amount-input no-currency-selection"
-                                                       type="number" v-model="receiverGetsSum"></div>
+                                                       type="text" v-model="receiverGetsSum"
+                                                       @input="sumChange('receiverGetsInput')"
+                                                       ref="receiverGetsInput"
+                                                ></div>
                                         </div>
                                     </div>
 
@@ -236,10 +243,13 @@
 
                                             <div
                                                 class="tgc-amount-currency-input-container">
-                                                <input inputmode="decimal"
+                                                <input inputmode="numeric"
                                                        autocomplete="amount-input"
                                                        class="tgc-amount tgc-calculator-select-amount q-calculator-from-amount-select amount-input no-currency-selection"
-                                                       type="number" v-model="outRegionSum"></div>
+                                                       type="text"
+                                                       @input="sumChange('outRegionInput')"
+                                                       ref="outRegionInput"
+                                                       v-model="outRegionSum"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -323,7 +333,7 @@ export default {
         isLocal: false,
         sendingFromSum: 300,
         receiverGetsSum: 0,
-        outRegionSum: 300,
+        outRegionSum: '300.00',
         minSum: 0,
     }),
     created() {
@@ -453,6 +463,27 @@ export default {
         },
         setLocal(val) {
             this.isLocal = val
+        },
+        setCursorPosition(el, pos) {
+            el.focus();
+            el.setSelectionRange(pos, pos);
+        },
+        sumChange(refInput) {
+            const newVal = this.$refs[refInput].value.replace(/[^+\d.]/g, '');
+            this.roundedSum = (Math.floor(newVal * 100) / 100).toFixed(2);
+
+            if (refInput == 'sendingInput') {
+               this.sendingFromSum = this.roundedSum;
+            }
+            if (refInput == 'receiverGetsInput') {
+                this.receiverGetsSum = this.roundedSum;
+            }
+            if (refInput == 'outRegionInput') {
+                this.outRegionSum = this.roundedSum;
+            }
+
+            const selectionStart = this.$refs[refInput].selectionStart
+            this.$nextTick(() => this.setCursorPosition(this.$refs[refInput], selectionStart));
         }
     }
 }

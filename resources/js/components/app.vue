@@ -5,14 +5,16 @@
                 <div class="navigation">
                     <ul>
                         <li tabindex="0" role="button" class="current-step" style="width: 25%;">
-                            1. Transfer details
+                            1. Детали перевода
                         </li>
-                        <li tabindex="0" role="button" class="" style="width: 25%;">2. Receiver
-                            details
+                        <li tabindex="0" role="button" class="" style="width: 25%;">
+                            2. Данные получателя
                         </li>
-                        <li tabindex="0" role="button" class="" style="width: 25%;">3. Review
+                        <li tabindex="0" role="button" class="" style="width: 25%;">
+                            3. Обзор
                         </li>
-                        <li tabindex="0" role="button" class="" style="width: 25%;">4. Pay in
+                        <li tabindex="0" role="button" class="" style="width: 25%;">
+                            4. Оплата
                         </li>
                     </ul>
                 </div>
