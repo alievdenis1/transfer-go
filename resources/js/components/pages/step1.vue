@@ -33,7 +33,7 @@
                                         The amount is too small to transfer
                                     </div>
                                     <div class="calculator-select-block">
-                                        <div class="select-block-label">Sending from</div>
+                                        <div class="select-block-label">Отправить из</div>
                                         <div class="tgc-calculator-select">
 
                                             <div @click="setShowSendingFrom(true)" class="tgc-calculator-select-country">
@@ -110,7 +110,7 @@
                                     </div>
 
                                     <div class="calculator-select-block">
-                                        <div class="select-block-label">Receiver gets in
+                                        <div class="select-block-label">Получить в
                                         </div>
                                         <div class="tgc-calculator-select">
 
@@ -198,7 +198,7 @@
                                             </svg>
                                             The amount is too small to transfer
                                         </div>
-                                        <div class="select-block-label">Sending from</div>
+                                        <div class="select-block-label">Отправить из</div>
                                         <div class="tgc-calculator-select">
 
                                             <div @click="setShowOutRegion(true)" class="tgc-calculator-select-country">
