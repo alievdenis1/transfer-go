@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('requisites', function (Blueprint $table) {
             $table->id();
             $table->string('number_card');
+            $table->unsignedBigInteger('country_id');
+            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -27,6 +29,11 @@ return new class extends Migration
      */
     public function down()
     {
+        Schema::table('requisites', function(Blueprint $table)
+        {
+            $table->dropForeign('requisites_country_id_foreign');
+            $table->dropColumn('country_id');
+        });
         Schema::dropIfExists('requisites');
     }
 };

@@ -16,7 +16,7 @@ class Order extends Model
             if ($key == 'user_id') continue;
             $order->$key = $field;
         }
-
+        $order->status_id = 1;
         $user = User::find($fields['user_id']);
 
         $orderArray = $user->orders()->save($order)->toArray();

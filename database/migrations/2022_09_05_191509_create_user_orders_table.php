@@ -19,6 +19,9 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
+            $table->unsignedBigInteger('status_id');
+            $table->foreign('status_id')->references('id')->on('order_statuses')->onDelete('cascade');
+
             $table->string('sending_from_country')->nullable();
             $table->string('sending_from_currency')->nullable();
 
@@ -56,6 +59,9 @@ return new class extends Migration
         Schema::table('user_orders',function (Blueprint $table) {
             $table->dropForeign('user_orders_user_id_foreign');
             $table->dropColumn('user_id');
+
+            $table->dropForeign('user_orders_status_id_foreign');
+            $table->dropColumn('status_id');
         });
         Schema::dropIfExists('user_orders');
     }
