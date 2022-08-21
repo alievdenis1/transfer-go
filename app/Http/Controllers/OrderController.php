@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class HomeController extends Controller
+class OrderController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -19,8 +19,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(int $id)
     {
-        return view('home');
+        return view('step4', ['order_id' => $id]);
     }
 }

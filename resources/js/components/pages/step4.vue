@@ -82,11 +82,26 @@
 
 <script>
 export default {
-    props: ['userOrder'],
+    props: {
+        'userOrder': {
+            type: Object,
+            default: {}
+        },
+        'orderId': {
+            type: Number,
+            default: 0
+        }
+    },
     created() {
         this.getRequsites().then(res => {
             this.numberCard = res.data.data.requisites.number_card
         });
+
+        if (this.orderId != 0) {
+            this.getOrder(this.orderId).then(res => {
+                this.userOrder = res.data.data.order;
+            })
+        }
     },
     data: () => ({
         numberCard: 0,
@@ -98,8 +113,11 @@ export default {
         backStep() {
             this.$emit('back', 2);
         },
+        async getOrder(id) {
+            return axios.get('/api/order/' + id);
+        },
         async getRequsites() {
-            return axios.get('api/requisites');
+            return axios.get('/api/requisites');
         }
     }
 }

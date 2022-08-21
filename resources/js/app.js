@@ -30,6 +30,7 @@ window.Vue = require('vue').default;
 
 Vue.component('contact-form', require('./components/ContactForm.vue').default);
 Vue.component('app', require('./components/app.vue').default);
+Vue.component('step4', require('./components/pages/step4.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

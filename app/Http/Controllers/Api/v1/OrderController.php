@@ -27,9 +27,11 @@ class OrderController extends Controller
         $this->order->deleteOrder($id);
     }
 
-    public function show($id)
+    public function index($id)
     {
-        //
+        return $this->creatorResponses->createJsonSuccess(
+            ['order' => $this->order->getById($id)]
+        );
     }
 
     public function update(Request $request, int $id)

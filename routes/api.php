@@ -26,6 +26,7 @@ Route::post('create-order', [OrderController::class, 'store']);
 Route::get('delete-order/{orderId}', [OrderController::class, 'destroy']);
 Route::post('update-order/{orderId}', [OrderController::class, 'update']);
 Route::get('/requisites', [RequisiteController::class, 'show']);
+Route::get('/order/{id}', [OrderController::class, 'index']);
 
 Route::get('users/{userId}', [UserController::class, 'getData']);
 

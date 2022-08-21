@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
+    public function getById($id): array
+    {
+        $order = UserOrder::find($id);
+        return $order->toArray();
+    }
+
     public function createOrder(array $fields): array
     {
         $order = new UserOrder();
