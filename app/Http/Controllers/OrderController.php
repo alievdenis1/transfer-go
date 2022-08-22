@@ -31,7 +31,7 @@ class OrderController extends Controller
     public function myList()
     {
         $userId = Auth::id();
-        $transactions = UserOrder::where('user_id', $userId)->get()->toArray();
+        $transactions = UserOrder::where('user_id', $userId)->with('status')->get()->toArray();
         return view('transactions', ['transactions' => $transactions]);
     }
 }
