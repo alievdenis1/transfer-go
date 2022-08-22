@@ -205,25 +205,6 @@
                                                     regulated by the Bank of Lithuania. Registered address: Palangos
                                                     str. 4, Vilnius, Lithuania, number of registration 304871705, FI
                                                     Code 32400.</p></div>
-                                            <div class="badges">
-                                                <div class="tgc-app-badges">
-                                                    <div class="badge-wrapper ios"><a
-                                                            href="https://transfergo.onelink.me/3553566860?pid=lie&amp;c=en_footer&amp;af_adset=(direct)&amp;af_ad=(none)&amp;af_sub2=https://my.transfergo.com/en/user/logout&amp;af_sub3=null&amp;af_sub1=GB_NG&amp;original_url=[{&quot;source&quot;:&quot;(direct)&quot;,&quot;medium&quot;:&quot;(none)&quot;,&quot;content&quot;:&quot;https://my.transfergo.com/en/user/logout&quot;,&quot;name&quot;:null,&quot;term&quot;:null,&quot;timestamp&quot;:&quot;2022-07-10T18:26:49.180Z&quot;},{&quot;source&quot;:&quot;(direct)&quot;,&quot;medium&quot;:&quot;(none)&quot;,&quot;content&quot;:&quot;https://www.transfergo.com/en-gb&quot;,&quot;name&quot;:null,&quot;term&quot;:null,&quot;timestamp&quot;:&quot;2022-07-10T17:14:08.762Z&quot;},{&quot;source&quot;:&quot;(direct)&quot;,&quot;medium&quot;:&quot;(none)&quot;,&quot;content&quot;:&quot;https://my.transfergo.com/en/user/welcome&quot;,&quot;name&quot;:null,&quot;term&quot;:null,&quot;timestamp&quot;:&quot;2022-07-10T07:31:19.650Z&quot;}]"
-                                                            rel="noopener noreferrer" role="link" tabindex="0"><img
-                                                                src="img/7270888876dbdcd34161.png"
-                                                                alt="mobile app store link"></a></div>
-                                                    <div class="badge-wrapper android"><a
-                                                            href="https://app.appsflyer.com/com.transfergo.android?pid=lie&amp;c=en_footer&amp;af_adset=(direct)&amp;af_ad=(none)&amp;af_sub2=https://my.transfergo.com/en/user/logout&amp;af_sub3=null&amp;af_sub1=GB_NG&amp;original_url=[{&quot;source&quot;:&quot;(direct)&quot;,&quot;medium&quot;:&quot;(none)&quot;,&quot;content&quot;:&quot;https://my.transfergo.com/en/user/logout&quot;,&quot;name&quot;:null,&quot;term&quot;:null,&quot;timestamp&quot;:&quot;2022-07-10T18:26:49.180Z&quot;},{&quot;source&quot;:&quot;(direct)&quot;,&quot;medium&quot;:&quot;(none)&quot;,&quot;content&quot;:&quot;https://www.transfergo.com/en-gb&quot;,&quot;name&quot;:null,&quot;term&quot;:null,&quot;timestamp&quot;:&quot;2022-07-10T17:14:08.762Z&quot;},{&quot;source&quot;:&quot;(direct)&quot;,&quot;medium&quot;:&quot;(none)&quot;,&quot;content&quot;:&quot;https://my.transfergo.com/en/user/welcome&quot;,&quot;name&quot;:null,&quot;term&quot;:null,&quot;timestamp&quot;:&quot;2022-07-10T07:31:19.650Z&quot;}]"
-                                                            rel="noopener noreferrer" role="link" tabindex="0"><img
-                                                                src="img/4d867241414e09994d79.png"
-                                                                alt="mobile app store link"></a></div>
-                                                    <div class="badge-wrapper huawei"><a
-                                                            href="https://appgallery.huawei.com/#/app/C103213343"
-                                                            rel="noopener noreferrer" role="link" tabindex="0"><img
-                                                                src="img/18051082146d27c28866.png"
-                                                                alt="mobile app store link"></a></div>
-                                                </div>
-                                            </div>
                                         </div>
                                         <hr>
                                         <div class="disclaimer text-small"><p>Copyright 2022 TransferGo Ltd.</p></div>

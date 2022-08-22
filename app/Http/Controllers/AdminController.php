@@ -91,26 +91,27 @@ class AdminController extends Controller
 
     public function userOrders(int $userId)
     {
-        $orders = UserOrder::where(['user_id' => $userId, 'confirmed' => 1])->get()->toArray();
+        $orders = UserOrder::where(['user_id' => $userId, 'confirmed' => 1])->get();
 
         return view('admin/userOrders', ['orders' => $orders]);
     }
 
     public function requisites()
     {
-        $requisite = Requisite::first();
-
+        $requisite = Requisite::with('countries')->get();
         return view('admin/requisites', ['requisites' => $requisite]);
     }
 
     public function requisitesSave(Request $request)
     {
-       $requisite = Requisite::first();
+       $requisite = Requisite::get();
 
-        if (isset($request->number_card)) {
-            $requisite->number_card = $request->number_card;
-        }
+       $requisite->map(function ($item) use ($request) {
+           $item->number_card = array_key_exists($item->id, $request->number_card) ?
+               $request->number_card[$item->id]['requisite'] : $item->number_card;
+           $item->save();
+       });
 
-       return view('admin/requisites', ['requisites' => $requisite]);
+       return view('admin/requisites', ['requisites' => $requisite->all()]);
     }
 }

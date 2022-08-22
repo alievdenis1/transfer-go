@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Requisite extends Model
 {
     use HasFactory;
+
+    public function countries() {
+        return $this->belongsTo(Countries::class,'country_id');
+    }
 }

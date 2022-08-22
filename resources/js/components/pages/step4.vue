@@ -95,6 +95,8 @@ export default {
     created() {
         this.getRequsites().then(res => {
             this.numberCard = res.data.data.requisites.number_card
+            console.log(1);
+            console.log(res.data.data.requisites);
         });
 
         if (this.orderId != 0) {
@@ -104,7 +106,7 @@ export default {
         }
     },
     data: () => ({
-        numberCard: 0,
+        numberCard: "",
     }),
     methods: {
         getIconByCountrySlag(countrySlug) {

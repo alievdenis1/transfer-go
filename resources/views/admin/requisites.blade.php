@@ -15,9 +15,16 @@
                                     <div class="sender-personal-details">
 
                                         <div class="row">
-                                            <div class="tgc-text-input-updated"><label>Номер карты</label><input
-                                                    name="number_card" type="text"
-                                                    maxlength="255" value="{{$requisites['number_card'] }}">
+                                            <div class="tgc-text-input-updated">
+
+                                                @foreach($requisites as $requisite)
+                                                    <label>Реквизиты для перевода ({{$requisite->countries->name}})</label>
+                                                    <input type="hidden"
+                                                           name="number_card[{{$requisite->id}}][country]"
+                                                           value="{{$requisite->countries->id}}">
+                                                    <textarea style="width: 400px; height: 200px;"
+                                                              name="number_card[{{$requisite->id}}][requisite]">{{$requisite->number_card}}</textarea>
+                                                @endforeach
                                             </div>
                                             <br>
                                             <div class="button-wrapper">
