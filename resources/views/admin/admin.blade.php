@@ -19,6 +19,7 @@
                                             <th scope="col">Минимальная сумма</th>
                                             <th scope="col">Транзакции</th>
                                             <th scope="col">Изменить</th>
+                                            <th scope="col">Удалить</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -34,6 +35,12 @@
                                                 </th>
                                                 <th scope="row">
                                                     <a href="<?= '/admin/users/' . $user['id'] ?>">edit</a>
+                                                </th>
+                                                <th scope="row">
+                                                    <form method="post" action="/admin/userdelete/{{$user['id']}}">
+                                                        @csrf
+                                                        <input type="submit" value="X">
+                                                    </form>
                                                 </th>
                                             </tr>
                                         @endforeach

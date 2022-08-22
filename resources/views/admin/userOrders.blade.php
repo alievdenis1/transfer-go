@@ -6,25 +6,25 @@
             <div class="tgc-layouts-full-height-table tgc-profile">
                 <div class="page">
                     <div class="outer-container">
-                        <div class="content">
-                            <div class="tgc-details">
                                 <div class="title">Users</div>
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th scope="col">Id</th>
-                                            <th scope="col">Sending from</th>
-                                            <th scope="col">Receiver get</th>
-                                            <th scope="col">First name</th>
-                                            <th scope="col">Last name</th>
-                                            <th scope="col">Type pay</th>
-                                            <th scope="col">Number card</th>
-                                            <th scope="col">Bank name</th>
-                                            <th scope="col">Account number</th>
-                                            <th scope="col">Type transaction</th>
-                                            <th scope="col">From sum</th>
-                                            <th scope="col">To sum</th>
-                                            <th scope="col">Exchange rate</th>
+                                            <th scope="col">Откуда</th>
+                                            <th scope="col">Куда</th>
+                                            <th scope="col">Имя</th>
+                                            <th scope="col">Фамилия</th>
+                                            <th scope="col">Тип</th>
+                                            <th scope="col">Номер карты</th>
+                                            <th scope="col">Название банка</th>
+                                            <th scope="col">Номер счета</th>
+                                            <th scope="col">Тип перевода</th>
+                                            <th scope="col">Сумма из</th>
+                                            <th scope="col">Сумма в</th>
+                                            <th scope="col">Курс</th>
+                                            <th scope="col">Статус</th>
+                                            <th scope="col"></th>
                                         </tr>
                                     </thead>
                                     @foreach ($orders as $order)
@@ -42,12 +42,28 @@
                                             <th scope="row">{{ $order['from_sum'] }}</th>
                                             <th scope="row">{{ $order['to_sum'] }}</th>
                                             <th scope="row">{{ $order['exchange_rate'] }}</th>
+                                            <th scope="row">
+                                                <form method="post" action="/admin/orderedit/{{$order['id']}}">
+                                                    @csrf
+                                                    <select name="statuses" id="status-select">
+                                                        @foreach($statuses as $status)
+                                                            <option {{ $order['status_id'] ==  $status['id'] ? 'selected' : ''  }} value="{{$status['id']}}">{{$status['name']}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                    <input type="submit" value="Применить">
+                                                </form>
+                                            </th>
+                                            <th scope="row">
+                                                <form method="post" action="/admin/orderdelete/{{$order['id']}}">
+                                                    @csrf
+                                                    <input type="submit" value="X">
+                                                </form>
+                                            </th>
                                         </tr>
                                     @endforeach
                                 </table>
 
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>

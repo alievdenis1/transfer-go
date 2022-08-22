@@ -65,6 +65,15 @@
                                                 </span>
                                             </a>
                                         </li>
+
+                                        <li class="MuiListItem-root MuiListItem-gutters MuiListItem-padding _11btEvZNBcBdY7ZO05v6pz css-1rr1cwd">
+                                            <a class="_1dZ3_E1uyq1SDOhbJ9YkTB MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-disableElevation MuiButton-fullWidth MuiButtonBase-root _1ABOKPkszDZESmnSM6q50K _308ge9eeJb_IyaGLvyIFvJ css-li77ye _2aQm2mrJyNyMlLVw1hNrA0"
+                                               tabindex="0" data-qa="navigation-home" href="/admin/orders">
+                                                <span class="_3F1mtacvw4BxMMtmokZDzR MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel">
+                                                    <span>Заявки</span>
+                                                </span>
+                                            </a>
+                                        </li>
                                     </nav>
                                     <footer class="MuiList-root Y-CbHi_tF5AsVsdxJUDfk css-1uzmcsd">
                                     </footer>

@@ -39,5 +39,10 @@ Route::group(['middleware' => 'role:Admin'], function() {
     Route::get('/admin/users/{id}', [App\Http\Controllers\AdminController::class, 'user']);
     Route::post('/admin/users/{id}', [App\Http\Controllers\AdminController::class, 'userUpdate']);
     Route::get('/admin/users/{id}/orders', [App\Http\Controllers\AdminController::class, 'userOrders']);
+    Route::get('/admin/orders', [App\Http\Controllers\AdminController::class, 'allOrders']);
+    Route::post('/admin/orderedit/{id}', [App\Http\Controllers\AdminController::class, 'editOrders']);
+    Route::post('/admin/orderdelete/{id}', [App\Http\Controllers\AdminController::class, 'deleteOrder']);
+    Route::post('/admin/userdelete/{id}', [App\Http\Controllers\AdminController::class, 'deleteUser']);
+
 });
 

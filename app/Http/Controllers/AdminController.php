@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\OrderStatus;
 use App\Models\Requisite;
 use App\Models\User;
 use App\Models\UserOrder;
@@ -94,6 +95,33 @@ class AdminController extends Controller
         $orders = UserOrder::where(['user_id' => $userId, 'confirmed' => 1])->get();
 
         return view('admin/userOrders', ['orders' => $orders]);
+    }
+
+    public function allOrders()
+    {
+        $orders = UserOrder::where(['confirmed' => 1])->with('status')->get();
+        $statuses = OrderStatus::get();
+
+        return view('admin/userOrders', ['orders' => $orders, 'statuses' => $statuses]);
+    }
+
+    public function editOrders(int $id, Request $request) {
+        $order = UserOrder::find($id);
+        $order->status_id = $request->statuses;
+        $order->save();
+        return redirect('admin/orders');
+    }
+
+    public function deleteOrder(int $id) {
+        $order = UserOrder::find($id);
+        $order->delete();
+        return redirect('admin/orders');
+    }
+
+    public function deleteUser(int $id) {
+        $user = User::find($id);
+        $user->delete();
+        return redirect('admin');
     }
 
     public function requisites()
