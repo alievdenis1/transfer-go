@@ -7,13 +7,23 @@
                     <main class="tgc-booking-page-content tgc-booking-steps-summary">
                         <div class="main-content"><h1 class="title"><span></span>4. Оплата</h1>
                                 <div class="review-container" style="">
-                                    <div class="form-group">
+                                    <div v-if="userOrder.confirmed == 0" class="form-group">
                                         <label for="cc-number">Реквизиты:</label><br>
                                         <span id="cc-number" class="form-field vgs-collect-container__empty vgs-collect-container__invalid">
                                         <span style="white-space: pre" v-html="numberCard"></span>
                                         </span>
                                     </div>
+                                    <div v-else>
+                                        <label for="cc-number">Статус заявки:</label><br>
+                                        <span>{{userOrder.status.name}}</span>
+                                    </div>
+
                                 </div>
+
+                            <div v-if="userOrder.confirmed == 0">
+                                <button class="mt-5 tgc-button large blue block-mobile" @click="setConfirmed">Я оплатил</button>
+                                <button class="tgc-button large block-mobile" @click="setStatus(2)">Отмена заявки</button>
+                            </div>
                         </div>
                     </main>
 
@@ -98,7 +108,6 @@ export default {
                 this.userOrder = res.data.data.order;
 
                 this.getRequsites().then(res => {
-                    console.log(res.data.data.requisites.number_card);
                     this.numberCard = res.data.data.requisites.number_card
                 });
             })
@@ -119,6 +128,24 @@ export default {
         },
         async getRequsites() {
             return axios.get('/api/requisites?country=' +  this.userOrder.sending_from_country);
+        },
+        setConfirmed() {
+            const formData = new FormData();
+
+            formData.append( 'confirmed', 1);
+
+            axios.post('/api/update-order/' + this.userOrder.id, formData).then(res => {
+                location.reload();
+            });
+        },
+        setStatus(status) {
+            const formData = new FormData();
+
+            formData.append( 'status_id', status);
+
+            axios.post('/api/update-order/' + this.userOrder.id, formData);
+
+            this.setConfirmed();
         }
     }
 }

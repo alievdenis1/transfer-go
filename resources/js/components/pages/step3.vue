@@ -189,7 +189,7 @@ export default {
         sendDataOrder() {
             const formData = new FormData();
 
-            formData.append( 'confirmed', 1);
+            formData.append( 'confirmed', 0);
 
             axios.post('api/update-order/' + this.userOrder.id, formData).then(res => {
                 if (res.data.Ok) {

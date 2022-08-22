@@ -10,7 +10,7 @@ class Order extends Model
 {
     public function getById($id): array
     {
-        $order = UserOrder::find($id);
+        $order = UserOrder::with('status')->where('id', $id)->first();
 
         $orderArray = $order->toArray();
         $orderArray['created_at'] =  date('d-m-Y', strtotime($orderArray['created_at'] . ' +1 day'));
