@@ -20,13 +20,18 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="dashboard svg">
+<button class="navbar-toggler">
+    <span class="navbar-toggler-icon">
+        <svg width="100%" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"/></svg>
+    </span>
+</button>
 <div id="app">
     <div class="_3vy-AK1RgGpBNb28Htno3W">
         <div class="main-view-wrapper">
             <div class="tgc-lie-app-main-view">
                 <div class="_2FTmTNGEMpWyxBfyVoKYjt">
                     <div class="_1s8rxzgpLdzWoXGW9Yiwhv">
-                        <div class="MuiDrawer-root MuiDrawer-docked css-1tu59u4">
+                        <div id="MuiDrawer-root" class="MuiDrawer-root MuiDrawer-docked css-1tu59u4">
                             <div class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 qdc69tKEkSqvo__3A2xHx MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-16l9v21">
                                 <section class="_12jOLfRztRS27KqeHJZp1Q">
                                     <header class="_32MRwcybR6pE9swTJ8f4z"><a class="tgc-links-inner active"

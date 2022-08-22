@@ -40727,7 +40727,38 @@ div.filepicker {
     padding: var(--spacer-16) var(--spacer-16) 0 var(--spacer-16);
 }
 
+.navbar-toggler {
+    right: 0;
+    background-color: white !important;
+    width: 90px;
+    height: 90px;
+    z-index: 99999;
+    position: absolute;
+    display: block;
+}
+
+._1dZ3_E1uyq1SDOhbJ9YkTB {
+    margin-right: 100px;
+}
+
+.MuiDrawer-root {
+    display: none
+}
+
+
 @media (min-width: 960px) {
+    .navbar-toggler {
+        display: none;
+    }
+
+    .MuiDrawer-root {
+        display: block;
+    }
+
+    ._1dZ3_E1uyq1SDOhbJ9YkTB {
+        margin-right: 0px;
+    }
+
     .rvkemudQE8b28pZiVUSbG {
         padding: 0;
         min-height: 720px;

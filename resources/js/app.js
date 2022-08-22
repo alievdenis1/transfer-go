@@ -41,3 +41,7 @@ Vue.component('step4', require('./components/pages/step4.vue').default);
 const app = new Vue({
     el: '#app',
 });
+
+document.querySelector('.navbar-toggler').addEventListener('click', () => {
+    document.querySelector('#MuiDrawer-root').classList.toggle('MuiDrawer-root');
+})
