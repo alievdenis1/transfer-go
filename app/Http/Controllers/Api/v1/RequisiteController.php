@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
+use App\Models\Countries;
 use App\Models\Requisite;
 use App\Services\Api\CreatorResponses;
 use App\Services\Order\Order;
@@ -14,9 +15,10 @@ class RequisiteController extends Controller
         private CreatorResponses $creatorResponses
     ) {}
 
-    public function show()
+    public function show(Request $request)
     {
-        $requisite = Requisite::first()->toArray();
+        $idCountry = Countries::where('slug', $request->country)->first()->id;
+        $requisite = Requisite::where('country_id', $idCountry)->first()->toArray();
 
         return $this->creatorResponses->createJsonSuccess(
             ['requisites' => $requisite]

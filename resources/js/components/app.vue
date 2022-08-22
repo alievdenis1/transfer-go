@@ -81,6 +81,7 @@ export default {
             this.currentStep = 4
             this.percentLoad = 100;
             this.userOrder = e;
+            setTimeout(() => window.location.replace("/order/" + e.id), 100);
         },
     }
 }

@@ -11,7 +11,10 @@ class Order extends Model
     public function getById($id): array
     {
         $order = UserOrder::find($id);
-        return $order->toArray();
+
+        $orderArray = $order->toArray();
+        $orderArray['created_at'] =  date('d-m-Y', strtotime($orderArray['created_at'] . ' +1 day'));
+        return $orderArray;
     }
 
     public function createOrder(array $fields): array

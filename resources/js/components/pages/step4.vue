@@ -8,9 +8,9 @@
                         <div class="main-content"><h1 class="title"><span></span>4. Оплата</h1>
                                 <div class="review-container" style="">
                                     <div class="form-group">
-                                        <label for="cc-number">Номер карты:</label><br>
+                                        <label for="cc-number">Реквизиты:</label><br>
                                         <span id="cc-number" class="form-field vgs-collect-container__empty vgs-collect-container__invalid">
-                                        <h5>{{numberCard}}</h5>
+                                        <span style="white-space: pre" v-html="numberCard"></span>
                                         </span>
                                     </div>
                                 </div>
@@ -93,15 +93,14 @@ export default {
         }
     },
     created() {
-        this.getRequsites().then(res => {
-            this.numberCard = res.data.data.requisites.number_card
-            console.log(1);
-            console.log(res.data.data.requisites);
-        });
-
         if (this.orderId != 0) {
             this.getOrder(this.orderId).then(res => {
                 this.userOrder = res.data.data.order;
+
+                this.getRequsites().then(res => {
+                    console.log(res.data.data.requisites.number_card);
+                    this.numberCard = res.data.data.requisites.number_card
+                });
             })
         }
     },
@@ -119,7 +118,7 @@ export default {
             return axios.get('/api/order/' + id);
         },
         async getRequsites() {
-            return axios.get('/api/requisites');
+            return axios.get('/api/requisites?country=' +  this.userOrder.sending_from_country);
         }
     }
 }
