@@ -18,6 +18,38 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Begin Verbox {literal} -->
+    <script>
+        (function(){(function c(d,w,m,i) {
+            window.supportAPIMethod = m;
+            var s = d.createElement('script');
+            s.id = 'supportScript';
+            var id = 'c377ca3b6f2cdd578e97a3c18430a3a8';
+            s.src = (!i ? 'https://admin.verbox.ru/support/support.js' : 'https://static.site-chat.me/support/support.int.js') + '?h=' + id;
+            s.onerror = i ? undefined : function(){c(d,w,m,true)};
+            w[m] = w[m]  function(){(w[m].q = w[m].q  []).push(arguments);};
+            (d.head || d.body).appendChild(s);
+        })(document,window,'Verbox')})();
+    </script>
+    <!-- {/literal} End Verbox -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            var z = null;m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(90039273, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/90039273" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 <body class="dashboard svg">
 <div id="app">
