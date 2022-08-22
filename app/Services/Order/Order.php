@@ -26,6 +26,13 @@ class Order extends Model
             $order->$key = $field;
         }
         $order->status_id = 1;
+
+        $rand = rand(10000, 99999);
+        while(UserOrder::where('uniqId', $rand)->count() != 0) {
+            $rand = rand(10000, 99999);
+        };
+        $order->uniqId = $rand;
+
         $user = User::find($fields['user_id']);
 
         $orderArray = $user->orders()->save($order)->toArray();

@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\UserOrder;
+use App\Services\Order\Order;
+use Illuminate\Support\Facades\Auth;
+
 class OrderController extends Controller
 {
     /**
@@ -22,5 +26,12 @@ class OrderController extends Controller
     public function index(int $id)
     {
         return view('step4', ['order_id' => $id]);
+    }
+
+    public function myList()
+    {
+        $userId = Auth::id();
+        $transactions = UserOrder::where('user_id', $userId)->get()->toArray();
+        return view('transactions', ['transactions' => $transactions]);
     }
 }

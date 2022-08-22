@@ -29,7 +29,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/settings', [App\Http\Controllers\UserSettingsController::class, 'index']);
     Route::post('/settings', [App\Http\Controllers\UserSettingsController::class, 'update']);
     Route::get('/order/{id}/', [App\Http\Controllers\OrderController::class, 'index']);
-
+    Route::get('/transactions', [App\Http\Controllers\OrderController::class, 'myList']);
 });
 
 Route::group(['middleware' => 'role:Admin'], function() {
