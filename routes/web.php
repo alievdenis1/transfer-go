@@ -43,6 +43,6 @@ Route::group(['middleware' => 'role:Admin'], function() {
     Route::post('/admin/orderedit/{id}', [App\Http\Controllers\AdminController::class, 'editOrders']);
     Route::post('/admin/orderdelete/{id}', [App\Http\Controllers\AdminController::class, 'deleteOrder']);
     Route::post('/admin/userdelete/{id}', [App\Http\Controllers\AdminController::class, 'deleteUser']);
-
+    Route::post('/admin/minsum', [App\Http\Controllers\AdminController::class, 'setMinSum']);
 });
 

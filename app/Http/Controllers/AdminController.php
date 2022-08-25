@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GlobalSetting;
 use App\Models\OrderStatus;
 use App\Models\Requisite;
 use App\Models\User;
@@ -33,6 +34,7 @@ class AdminController extends Controller
 
     public function user(int $userId)
     {
+        $minsum = GlobalSetting::first()->minsum;
         $user = User::find($userId)->toArray();
         if (isset($user['date_birth'])) {
             $user['day_birth'] = date('d', strtotime($user['date_birth']));
@@ -43,7 +45,7 @@ class AdminController extends Controller
             $user['month_birth'] = null;
             $user['year_birth'] = null;
         }
-        return view('admin/userSettings', ['user' => $user]);
+        return view('admin/userSettings', ['user' => $user, 'minsum' => $minsum]);
     }
 
     public function userUpdate(int $userId, Request $request)
@@ -93,8 +95,9 @@ class AdminController extends Controller
     public function userOrders(int $userId)
     {
         $orders = UserOrder::where(['user_id' => $userId, 'confirmed' => 1])->get();
+        $statuses = OrderStatus::get();
 
-        return view('admin/userOrders', ['orders' => $orders]);
+        return view('admin/userOrders', ['orders' => $orders, 'statuses' => $statuses]);
     }
 
     public function allOrders()
@@ -127,7 +130,8 @@ class AdminController extends Controller
     public function requisites()
     {
         $requisite = Requisite::with('countries')->get();
-        return view('admin/requisites', ['requisites' => $requisite]);
+        $minsum = GlobalSetting::first()->minsum;
+        return view('admin/requisites', ['requisites' => $requisite, 'minsum' => $minsum]);
     }
 
     public function requisitesSave(Request $request)
@@ -141,5 +145,14 @@ class AdminController extends Controller
        });
 
        return view('admin/requisites', ['requisites' => $requisite->all()]);
+    }
+
+    public function setMinSum(Request $request)
+    {
+        $globalSetting = GlobalSetting::first();
+        $globalSetting->minsum = $request->post('minsum');
+        $globalSetting->save();
+
+        return redirect('admin/requisites');
     }
 }

@@ -16,7 +16,7 @@
                                         <div class="row">
                                             <div class="tgc-text-input-updated"><label>Min sum</label><input
                                                     name="minPayment" type="text"
-                                                    maxlength="255" value="{{$user['min_payment'] ?? 100}}">
+                                                    maxlength="255" value="{{$user['min_payment'] ?? $minsum}}">
                                             </div>
                                         </div>
 

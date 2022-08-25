@@ -9,7 +9,25 @@
                         <div class="content">
                             <div class="tgc-details">
 
-                                <div class="title">Requisites</div>
+                                <h2>Минимальная сумма перевода</h2>
+                                <form action="/admin/minsum" method="post" class="tgc-profile-details-form-minified">
+                                    @csrf
+                                    <div class="sender-personal-details">
+
+                                        <div class="row">
+                                            <div class="tgc-text-input-updated">
+                                                    <input name='minsum' value="{{$minsum}}"/>
+                                            </div>
+                                            <br>
+                                            <div class="button-wrapper">
+                                                <button class="tgc-button large blue block-mobile" type="submit"><span
+                                                        class="button-content">Сохранить</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <h2>Реквизиты</h2>
                                 <form action="/admin/requisites" method="post" class="tgc-profile-details-form-minified">
                                     @csrf
                                     <div class="sender-personal-details">

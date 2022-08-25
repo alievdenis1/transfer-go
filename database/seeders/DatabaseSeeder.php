@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
             RequisiteSeeder::class,
             RoleSeeder::class,
             UserSeeder::class,
-            OrderStatusSeeder::class
+            OrderStatusSeeder::class,
+            GlobalConfigSeed::class
         ]);
     }
 }
