@@ -168,7 +168,14 @@
                                     </div>
 
                                     <div class="tgc-calculator-fees">
-                                        <div class="rate-block">1 {{sendingFrom.currency.slug}} = {{convertCurrency(sendingFrom.currency, receiverGets.currency, 1)}} {{receiverGets.currency.slug}}</div>
+                                        <div v-if="sendingFrom.currency.slug == 'RUB'" class="rate-block">
+                                            1 {{receiverGets.currency.slug}} =
+                                            {{convertCurrency(receiverGets.currency, sendingFrom.currency, 1)}} {{sendingFrom.currency.slug}}
+                                        </div>
+                                        <div v-else class="rate-block">
+                                            1 {{sendingFrom.currency.slug}} =
+                                            {{convertCurrency(sendingFrom.currency, receiverGets.currency, 1)}} {{receiverGets.currency.slug}}
+                                        </div>
                                         <div class="fee-block">
                                             <div class="tgc-simple-tooltip">
                                                 <div class="tooltip--container">
@@ -331,7 +338,7 @@ export default {
         showReceiverGets: false,
         showOutRegion: false,
         isLocal: false,
-        sendingFromSum: 300,
+        sendingFromSum: '300.00',
         receiverGetsSum: 0,
         outRegionSum: '300.00',
         minSum: 0,
@@ -350,13 +357,6 @@ export default {
         userData(newVal) {
             this.minSum = newVal.min_payment;
         },
-        sendingFromSum(newVal) {
-            this.receiverGetsSum = this.convertCurrency(this.sendingFrom.currency, this.receiverGets.currency, newVal);
-        },
-        receiverGetsSum(newVal) {
-            const convertedSum = this.convertCurrency(this.receiverGets.currency, this.sendingFrom.currency, newVal);
-            this.sendingFromSum = convertedSum;
-        },
         sendingFrom(newVal, oldVal) {
             this.sendingFromSum = this.convertCurrency(oldVal.currency, newVal.currency, this.sendingFromSum);
         },
@@ -365,6 +365,9 @@ export default {
         }
     },
     computed: {
+        a(e) {
+           console.log(e);
+        },
         isMoreMinSum() {
             if (this.sendingFrom == null) {
                 return false;
@@ -474,9 +477,11 @@ export default {
 
             if (refInput == 'sendingInput') {
                this.sendingFromSum = this.roundedSum;
+               this.receiverGetsSum = this.convertCurrency(this.sendingFrom.currency, this.receiverGets.currency, this.roundedSum);
             }
             if (refInput == 'receiverGetsInput') {
                 this.receiverGetsSum = this.roundedSum;
+                this.sendingFromSum = this.convertCurrency(this.receiverGets.currency, this.sendingFrom.currency, this.roundedSum);
             }
             if (refInput == 'outRegionInput') {
                 this.outRegionSum = this.roundedSum;
