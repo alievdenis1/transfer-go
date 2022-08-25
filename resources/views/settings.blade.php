@@ -8,12 +8,12 @@
                     <div class="outer-container">
                         <div class="content">
                             <div class="tgc-details">
-                                <div class="title">Personal details</div>
+                                <div class="title">Настройки аккаунта</div>
                                 <form action="/settings" method="post" class="tgc-profile-details-form-minified">
                                     @csrf
                                     <div class="sender-personal-details">
                                         <div class="row">
-                                            <div class="tgc-text-input-updated"><label>First name</label><input
+                                            <div class="tgc-text-input-updated"><label>Имя</label><input
                                                     name="originalFirstName" type="text"
                                                     data-qa="input-originalFirstName" maxlength="255" value="{{$user['name']}}">
                                             </div>
@@ -23,7 +23,7 @@
                                                                        value="{{$user['last_name']}}"></div>
                                         </div>
                                         <div class="row dob-phone-row">
-                                            <div class="tgc-dob-fields-minified"><label>Date of birth</label>
+                                            <div class="tgc-dob-fields-minified"><label>День рождения</label>
                                                 <div class="dob-fields">
                                                     <div class="dob-input-day">
                                                         <div class="tgc-text-input-updated"><input name="day"
@@ -49,7 +49,7 @@
                                                 </div>
                                             </div>
                                                 <div class="input-wrapper">
-                                                <div class="phone-input-label">Phone number</div>
+                                                <div class="phone-input-label">Номер телефона</div>
                                                     <div class="tgc-text-input-updated">
                                                         <input name="phone_number"
                                                                placeholder="8951 999 99 99"
@@ -71,32 +71,34 @@
                                     </div>
                                     <div class="horizontal-divider"></div>
                                     <div class="tgc-address-inputs">
-                                        <div class="tgc-text-input-updated"><label>Country</label><input name="country"
+                                        <div class="tgc-text-input-updated"><label>Страна</label><input name="country"
                                                                                                          type="text"
                                                                                                          data-qa="input-street"
                                                                                                          maxlength="255"
                                                                                                          value="{{$user['country']}}">
                                         </div>
-                                        <div class="tgc-text-input-updated"><label>Address</label><input name="address"
+                                        <div class="tgc-text-input-updated"><label>Адресс</label><input name="address"
                                                                                                          type="text"
                                                                                                          data-qa="input-street"
                                                                                                          maxlength="255"
                                                                                                          value="{{$user['address']}}">
                                         </div>
                                         <div class="city-postcode-row">
-                                            <div class="tgc-text-input-updated half-input"><label>City</label><input
+                                            <div class="tgc-text-input-updated half-input"><label>Город</label><input
                                                     name="city" type="text" data-qa="input-city" maxlength="255"
                                                     value="{{$user['city']}}"></div>
-                                            <div class="tgc-text-input-updated half-input"><label>Postcode</label><input
+                                            <div class="tgc-text-input-updated half-input">
+                                                <label>Почтовый индекс
+                                                </label>
+                                                <input
                                                     name="postcode" type="text" data-qa="input-postcode" maxlength="255"
                                                     value="{{$user['postcode']}}"></div>
                                         </div>
                                     </div>
                                     <div class="details-footer">
-                                        <div class="requirement-block">All fields are required</div>
                                         <div class="button-wrapper">
                                             <button class="tgc-button large blue block-mobile" type="submit"><span
-                                                    class="button-content">Save changes</span></button>
+                                                    class="button-content">Сохранить</span></button>
                                         </div>
                                     </div>
                                 </form>

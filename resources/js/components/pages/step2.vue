@@ -16,11 +16,12 @@
                                                     class="tgc-search-icon calculator-search-icon"
                                                     style="background-image: url(&quot;https://www.transfergo.com/static/images/search.svg&quot;);"></span><span
                                                 class="tgc-country-flag calculator-flag-icon active"
-                                                :style="getIconByCountrySlag(countryReceiverGets.slug)"></span><input
+                                                :style="getIconByCountrySlag(countryReceiverGets.slug)"></span>
+                                                <input
                                                 class="calculator-select-country-input from-country q-from-country"
                                                 type="text"
                                                 autocomplete="calculator-select-to-from-input"
-                                                placeholder="Type country" :value="countryReceiverGets.slug">
+                                                placeholder="Type country" :value="countryReceiverGets.slug + ' • ' + countryReceiverGets.currency.slug">
                                                 <svg stroke="currentColor"
                                                      fill="currentColor" stroke-width="0"
                                                      viewBox="0 0 24 24"
@@ -135,7 +136,7 @@
                                                 <div class="name-input">
                                                     <div class="tgc-text-input-updated"><label>Название банка
                                                         </label><input name="lastName"
-                                                                           placeholder="Введите фамилию получателя" type="text"
+                                                                           placeholder="Введите название банка" type="text"
                                                                            data-qa="input-lastName" maxlength="255" value=""
                                                                            v-model="bankName">
                                                     </div>
@@ -237,14 +238,19 @@ export default {
         lastName: '',
         typePay: 'ДЕБЕТОВАЯ/КРЕДИТНАЯ КАРТА',
         showTypePay: false,
-        numberAccount: "",
-        bankName: "",
+        numberAccount: '',
+        bankName: '',
         toSum: 0
     }),
     watch: {
         countryReceiverGets(newVal, oldVal) {
             this.toSum = this.convertCurrency(oldVal.currency, newVal.currency, this.toSum);
         }
+    },
+    computed: {
+      isValid() {
+          return (this.firstName != '' && this.lastName && this.numberAccount != '' && this.bankName != '' ) ? true : false;
+      }
     },
     methods: {
         convertCurrency(currencyFrom, currencyTo, sum) {
@@ -277,6 +283,11 @@ export default {
             return 'background-image: url(/img/' + countrySlug + '.svg);';
         },
         sendDataOrder() {
+            if (!this.isValid) {
+                alert('Заполнены не все поля');
+                return
+            }
+
             const formData = new FormData();
 
             if (this.countryReceiverGets.slug == this.userOrder.sending_from_country) {
