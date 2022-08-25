@@ -18,7 +18,7 @@ class GlobalConfigSeed extends Seeder
         if ($gb == null) {
             $nGb = new GlobalSetting;
             $nGb->minsum = 100;
-            $nGb->save;
+            $nGb->save();
         }
     }
 }
