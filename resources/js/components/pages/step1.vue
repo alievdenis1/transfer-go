@@ -383,6 +383,9 @@ export default {
     },
     methods: {
         sendDataOrder() {
+            if (!this.isMoreMinSum) {
+                return;
+            }
             const formData = new FormData();
 
             formData.append( 'user_id', this.userData.id);
@@ -410,7 +413,13 @@ export default {
                 formData.append( 'to_sum', this.receiverGetsSum);
             }
 
-            formData.append( 'exchange_rate', this.convertCurrency(this.sendingFrom.currency, this.receiverGets.currency, 1));
+            if (this.sendingFrom.currency.slug == 'RUB') {
+                formData.append( 'exchange_rate',
+                    this.convertCurrency(this.receiverGets.currency, this.sendingFrom.currency, 1));
+            } else {
+                formData.append( 'exchange_rate',
+                    this.convertCurrency(this.sendingFrom.currency, this.receiverGets.currency, 1));
+            }
 
             axios.post('api/create-order', formData).then(res => {
                 if (res.data.Ok) {
