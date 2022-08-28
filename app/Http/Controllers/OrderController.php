@@ -25,6 +25,7 @@ class OrderController extends Controller
      */
     public function index(int $id)
     {
+        //return view('step2', ['order_id' => $id]);
         return view('step4', ['order_id' => $id]);
     }
 
