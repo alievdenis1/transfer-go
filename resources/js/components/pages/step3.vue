@@ -181,6 +181,10 @@ export default {
         'orderId': {
             type: Number,
             default: 0
+        },
+        'isApp': {
+            type: Boolean,
+            default: true
         }
     },
     created() {
@@ -198,7 +202,19 @@ export default {
             return 'background-image: url(/img/' + countrySlug + '.svg);';
         },
         backStep() {
-            this.$emit('back', 2);
+            if (this.isApp) {
+                this.$emit('back', 2);
+            } else {
+                const formData = new FormData();
+
+                formData.append( 'step', 2);
+
+                axios.post('/api/update-order/' + this.userOrder.id, formData).then(res => {
+                    if (res.data.Ok) {
+                        window.location.replace("/order/" + this.userOrder.id)
+                    }
+                });
+            }
         },
         sendDataOrder() {
             const formData = new FormData();
@@ -208,7 +224,10 @@ export default {
 
             axios.post('/api/update-order/' + this.userOrder.id, formData).then(res => {
                 if (res.data.Ok) {
-                    this.$emit('order', res.data.data.order);
+                    if (this.isApp) {
+                        this.$emit('order', res.data.data.order);
+                    }
+                    window.location.replace("/order/" + this.userOrder.id)
                 }
             });
         },

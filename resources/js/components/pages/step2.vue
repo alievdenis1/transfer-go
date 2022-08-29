@@ -228,6 +228,10 @@ export default {
         'orderId': {
             type: Number,
             default: 0
+        },
+        'isApp': {
+            type: Boolean,
+            default: true
         }
     },
     created() {
@@ -303,8 +307,19 @@ export default {
             return await axios.get('/api/countries');
         },
         backStep() {
-            axios.get('/api/delete-order/' + this.userOrder.id);
-            this.$emit('back', 1);
+            if (this.isApp) {
+                this.$emit('back', 1);
+            } else {
+                const formData = new FormData();
+
+                formData.append( 'step', 1);
+
+                axios.get('/api/delete-order/' + this.userOrder.id).then(res => {
+                    if (res.data.Ok) {
+                        window.location.replace("/app")
+                    }
+                });
+            }
         },
         getIconByCountrySlag(countrySlug) {
             return 'background-image: url(/img/' + countrySlug + '.svg);';
@@ -340,7 +355,11 @@ export default {
 
             axios.post('/api/update-order/' + this.userOrder.id, formData).then(res => {
                 if (res.data.Ok) {
-                    this.$emit('order', res.data.data.order);
+                    if (this.isApp) {
+                        this.$emit('order', res.data.data.order);
+                    } else {
+                        window.location.replace("/order/" + this.userOrder.id)
+                    }
                 }
             });
         },

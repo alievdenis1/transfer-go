@@ -100,6 +100,10 @@ export default {
         'orderId': {
             type: Number,
             default: 0
+        },
+        'isApp': {
+            type: Boolean,
+            default: true
         }
     },
     created() {
@@ -119,9 +123,6 @@ export default {
     methods: {
         getIconByCountrySlag(countrySlug) {
             return 'background-image: url(/img/' + countrySlug + '.svg);';
-        },
-        backStep() {
-            this.$emit('back', 2);
         },
         async getOrder(id) {
             return axios.get('/api/order/' + id);
