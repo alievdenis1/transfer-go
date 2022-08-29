@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="Object.keys(userOrder).length">
         <div class="content-row">
             <div class="content-cell">
                 <div class="tgc-booking-views-page tgc-booking-steps-recipient">
@@ -220,15 +220,39 @@
 
 <script>
 export default {
-    props: ['userOrder'],
+    props: {
+        'userOrder': {
+            type: Object,
+            default: {}
+        },
+        'orderId': {
+            type: Number,
+            default: 0
+        }
+    },
     created() {
-        this.getCountries().then(res => {
-            this.countries = res.data.data;
-            this.toSum = this.userOrder.to_sum
-            this.countryReceiverGets = this.countries.filter(
-                country => country.currency.slug == this.userOrder.receiver_get_currency
-            )[0]
-        });
+        if (this.orderId != 0) {
+            this.getOrder(this.orderId).then(res => {
+                this.userOrder = res.data.data.order;
+
+                this.getCountries().then(res => {
+                    this.countries = res.data.data;
+                    this.toSum = this.userOrder.to_sum
+                    this.countryReceiverGets = this.countries.filter(
+                        country => country.currency.slug == this.userOrder.receiver_get_currency
+                    )[0]
+                });
+            })
+        } else {
+            this.getCountries().then(res => {
+                this.countries = res.data.data;
+                this.toSum = this.userOrder.to_sum
+                this.countryReceiverGets = this.countries.filter(
+                    country => country.currency.slug == this.userOrder.receiver_get_currency
+                )[0]
+            });
+        }
+
     },
     data: () => ({
         countries: {},
@@ -253,6 +277,9 @@ export default {
       }
     },
     methods: {
+        async getOrder(id) {
+            return axios.get('/api/order/' + id);
+        },
         convertCurrency(currencyFrom, currencyTo, sum) {
             let convertedSum = sum * currencyFrom.exchangesRates[currencyTo.slug];
             convertedSum = convertedSum.toFixed(2);
@@ -273,10 +300,10 @@ export default {
             this.showReceiverGets = val;
         },
         async getCountries() {
-            return await axios.get('api/countries');
+            return await axios.get('/api/countries');
         },
         backStep() {
-            axios.get('api/delete-order/' + this.userOrder.id);
+            axios.get('/api/delete-order/' + this.userOrder.id);
             this.$emit('back', 1);
         },
         getIconByCountrySlag(countrySlug) {
@@ -309,8 +336,9 @@ export default {
             } else {
                 formData.append( 'account_number', this.numberAccount);
             }
+            formData.append( 'step', 3);
 
-            axios.post('api/update-order/' + this.userOrder.id, formData).then(res => {
+            axios.post('/api/update-order/' + this.userOrder.id, formData).then(res => {
                 if (res.data.Ok) {
                     this.$emit('order', res.data.data.order);
                 }

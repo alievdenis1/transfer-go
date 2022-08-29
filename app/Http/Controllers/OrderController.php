@@ -25,8 +25,19 @@ class OrderController extends Controller
      */
     public function index(int $id)
     {
-        //return view('step2', ['order_id' => $id]);
-        return view('step4', ['order_id' => $id]);
+        $order = UserOrder::where('id', $id)->first()->toArray();
+
+        if ($order["step"] == 2) {
+            return view('step2', ['order_id' => $id]);
+        }
+
+        if ($order["step"] == 3) {
+            return view('step3', ['order_id' => $id]);
+        }
+
+        if ($order["step"] == 4) {
+            return view('step4', ['order_id' => $id]);
+        }
     }
 
     public function myList()

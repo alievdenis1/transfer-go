@@ -413,6 +413,9 @@ export default {
                 formData.append( 'to_sum', this.receiverGetsSum);
             }
 
+            formData.append( 'step', 2);
+
+
             if (this.sendingFrom.currency.slug == 'RUB') {
                 formData.append( 'exchange_rate',
                     this.convertCurrency(this.receiverGets.currency, this.sendingFrom.currency, 1));

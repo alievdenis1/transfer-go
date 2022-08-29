@@ -173,13 +173,27 @@
 
 <script>
 export default {
-    props: ['userOrder'],
-    created() {
+    props: {
+        'userOrder': {
+            type: Object,
+            default: {}
+        },
+        'orderId': {
+            type: Number,
+            default: 0
+        }
     },
-    data: () => ({
-
-    }),
+    created() {
+        if (this.orderId != 0) {
+            this.getOrder(this.orderId).then(res => {
+                this.userOrder = res.data.data.order;
+            })
+        }
+    },
     methods: {
+        async getOrder(id) {
+            return axios.get('/api/order/' + id);
+        },
         getIconByCountrySlag(countrySlug) {
             return 'background-image: url(/img/' + countrySlug + '.svg);';
         },
@@ -190,8 +204,9 @@ export default {
             const formData = new FormData();
 
             formData.append( 'confirmed', 0);
+            formData.append( 'step', 4);
 
-            axios.post('api/update-order/' + this.userOrder.id, formData).then(res => {
+            axios.post('/api/update-order/' + this.userOrder.id, formData).then(res => {
                 if (res.data.Ok) {
                     this.$emit('order', res.data.data.order);
                 }
